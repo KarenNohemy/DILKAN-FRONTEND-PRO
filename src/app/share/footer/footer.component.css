@@ -1,0 +1,54 @@
+.footer {
+  background-color: #0B0D17;
+  color: #D9DBE1;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section,
+.right-section {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+/*LOGO*/
+/*
+.center-section {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #F1E4FF;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #F1E4FF;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+*/
+/*ENLACES DE GIT Y YOUTUBE*/
+.circle a img {
+  width: 45px; /* Ajusta el tamaño según tus necesidades */
+  height: 45px;
+  border-radius: 50%; /* Crea bordes redondeados */
+}
+.youtube{
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+
+.git {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}

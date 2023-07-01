@@ -1,0 +1,200 @@
+body{
+  background-color: #EEEFF4;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  color: #E44D26;
+  margin-left: 55px;
+
+}
+
+.content .heading {
+  font-weight: 950;
+  font-size: 65px;
+  text-align: center;
+}
+
+.content .para {
+  line-height: 1.5;
+  color: #474A57;
+  font-size: 28px;
+}
+
+.content .btn {
+  color: #18191F;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(-55deg, #f89b29 10%, #FDCD00 100% );
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(-45deg, #f89b29 0%, #E44D26 100% );
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+
+
+
+/*IMAGENES*/
+
+
+.container {
+  display: flex;
+  height: 80%;
+  background-color: #EEEFF4;
+  padding-bottom: 65px;
+}
+
+.half {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logos{
+  background-color: #474A57;
+  height: 600px;
+  width: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+
+}
+
+
+
+.logoDilkan img {
+  margin-top: 10px;
+  width: 350px; /* Ajusta el tamaño según tus necesidades */
+  border-radius: 35%; /* Crea bordes redondeados */
+  display: flex;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle img {
+  width: 100px; /* Ajusta el tamaño según tus necesidades */
+  border-radius: 50%; /* Crea bordes redondeados */
+}
+
+
+#html{
+  position: absolute;
+  top: 45%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+
+#css{
+  position: absolute;
+  top: 73%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+
+#js{
+  position: absolute;
+  top: 89%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+}
+
+/*PLANES*/
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 80px;
+  text-align: center;
+}
+
+.grid-container .title {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #18191F;
+  margin-top: 10px;
+  font-size: 35px;
+  letter-spacing: 1px;
+  grid-column: 1 / -1;
+}
+.planes{
+  display: flex;
+  justify-content: center;
+}
+
+.plan {
+  width: 260px;
+  padding: 20px 1px;
+  margin: 30px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  background-color: #474A57;
+  background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%);
+  padding: 20px;
+  margin: 0 10px;
+}
+
+.content-plan .price {
+  color: #F4F5F7;
+  font-weight: 800;
+  font-size: 50px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+}
+
+.content-plan {
+  padding: 10px;
+
+}
+
+.content-plan .description {
+  color: #EEEFF4;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.content-plan .title {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #EEEFF4;
+  margin-top: 10px;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.content-plan img {
+  width: 150px; /* Ajusta el tamaño según tus necesidades */
+  border-radius: 10%; /* Crea bordes redondeados */
+}
