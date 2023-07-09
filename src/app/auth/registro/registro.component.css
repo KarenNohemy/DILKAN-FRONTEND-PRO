@@ -1,0 +1,273 @@
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+body {
+  font-family: 'Inter';
+  color: #1a1a1a;
+  background-color: #D9E8EF; }
+
+/*SECCIÓN DE IMAGEN*/
+.modal {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 200px;
+  z-index: 100;
+overflow-y: auto;
+}
+
+.modal__container {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 675px;
+  min-height: 400px;
+  margin-bottom: 125px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+}
+.modal__featured {
+  position: relative;
+  -ms-flex: 1;
+      flex: 1;
+  min-width: 230px;
+  padding: 20px;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.modal__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200%;
+  width: 200%;
+  border-radius: 50%;
+  -ms-transform: translateX(-50%) translateY(-25%);
+  transform: translateX(-50%) translateY(-25%);
+  background: linear-gradient(to bottom, #1D4FB5, #655BC9, #A666DC);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.modal__logo {
+  position: absolute;
+  top: 25%;
+  left: 52%;
+  max-width: 85%;
+  -ms-transform: translateX(calc(-50% - 10px));
+      transform: translateX(calc(-50% - 10px));
+}
+/*CREAR CUENTA*/
+.text-inicio {
+  -ms-flex: 3;
+      flex: 3;
+  padding: 40px 30px;
+  text-align: center;
+  line-height: 100%;
+  color: #18191F
+}
+
+/*FORMULARIO*/
+.formulario{
+  padding: 2%;
+}
+
+/*INPUTS*/
+input {
+  height: 35px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  margin-top: 5%;
+  margin-bottom: 1%;
+  }
+  input:valid {
+    border-color: #d9d9d9;
+    border: 3px solid #7e8ad2; }
+  input:focus {
+    outline: none;
+    border-color: #695CCA; }
+  input::placeholder{
+    text-align: left;
+    vertical-align: middle;
+    font-family: Inter;
+    font-size:large;
+    font-weight: 700;
+    line-height: 70%;
+    color: #656872;
+  }
+
+
+/*BOTON DE CREAR CUENTA*/
+.button {
+  color: #ffffff;
+  background: linear-gradient(to bottom, #30a3ea, #379ad6, #bf72d2);
+  padding: 12px 25px;
+  margin-top: 10%;
+  margin-bottom: 10px;
+  font-size: 15px;
+
+  font-family: Inter;
+
+  font-weight: 550;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 2px;
+  outline: 0;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  transition: all .2s;
+  border-radius: 0.5rem;}
+
+  .button:hover, .button:active, .button:focus {
+    -ms-transform: scale(1.1);
+        transform: scale(1.1); }
+
+
+/*BOTON DE VOLVER*/
+.button--transparent {
+  background: transparent;
+  border: 0;
+  outline: 0; }
+
+.button--close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  border-radius: 50%;
+  transition: all .25s;
+  z-index: 10; }
+  .button--close svg {
+    width: 20px;
+    height: 20px; }
+    .button--close svg * {
+      fill: currentColor; }
+  .button--close:hover, .button--close:active, .button--close:focus {
+    color: #695CCA;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1); }
+
+
+/*BTNS VER PLANES Y SUBIR FOTO*/
+.button2 {
+  display: flex;
+  float:right;
+  background-color: #d9d9d9;
+  padding: 0.5rem 1.4rem;
+  margin-top: 10%;
+  margin-bottom: 10px;
+
+
+  justify-content: flex-end;
+  text-align: left;
+  vertical-align: middle;
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 70%;
+  color: #656872;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px #695CCA;
+  cursor: pointer;
+  transition: .6s ease;
+}
+
+.p{
+  display: flex;
+  font-family: Inter;
+  font-size:larger;
+  font-weight: 700;
+  margin-top: 15%;
+
+  margin-left: -15%;
+  margin-right: 8%;
+
+  color: #656872;
+}
+
+.btn-txt{
+  display:inline-flex;
+}
+
+/*FACEBOOK*/
+.button-facebook {
+  display: flex;
+  background: linear-gradient(to bottom, #379ad6, #408dbd, #c4d9e7);
+  padding: 0.5rem 1.4rem;
+  margin-top: 10%;
+  margin-bottom: 10px;
+  margin-left: 10%;
+  text-align: left;
+  vertical-align: middle;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 70%;
+  color: #ffffff;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  gap: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px #695CCA;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border: none;
+}
+
+.button-facebook svg {
+  height: 30px;
+}
+
+  /*Link de ir a registro*/
+  a{
+    font-size: large;
+    color: #474A57;
+
+  }
+  a:hover{
+    color: #695CCA;
+    cursor: pointer;
+  }
+
+
+/*FOTO*/
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+.circle img {
+  max-width: 100%;
+  max-height: 100%;
+}
