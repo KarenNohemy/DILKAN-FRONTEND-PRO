@@ -10,18 +10,35 @@
 </head>
 <body>
   <div class="container">
-    <textarea id="htmlCode" style="display: none;"><html><body><h1>HTML</h1><p>Edit this HTML code!</p></body></html></textarea>
-    <textarea id="cssCode" style="display: none;">body { background-color: red; color: white; }</textarea>
-    <textarea id="jsCode" style="display: none;">function greet() { alert('Hello, JavaScript!'); }</textarea>
-
-    <iframe id="htmlIframe" class="iframe" width="400" height="300" srcdoc=""></iframe>
-    <iframe id="cssIframe" class="iframe" width="400" height="300" srcdoc=""></iframe>
-    <iframe id="jsIframe" class="iframe" width="400" height="300" srcdoc=""></iframe>
-    <iframe id="pantallaIframe" class="iframe" width="400" height="300" srcdoc=""></iframe>
+    <textarea id="htmlArea" class="text-area" width="400" height="300" srcdoc=""></textarea>
+    <textarea id="cssArea" class="text-area"  width="400" height="300" srcdoc=""></textarea>
+    <textarea id="jsArea"class="text-area"  width="400" height="300" srcdoc=""></textarea>
+    <textarea id="pantalla" class="text-area"  width="400" height="300" srcdoc=""></textarea>
   </div>
+
+  <script>
+    const textAreas = document.getElementsByClassName('text-area');
+
+    Array.from(textAreas).forEach(textArea => {
+      textArea.addEventListener('input', () => {
+        const highlightedText = highlightText(textArea.value, textArea.selectionStart);
+        textArea.innerHTML = highlightedText;
+      });
+    });
+
+    function highlightText(text, cursorPosition) {
+      const words = text.split(' ');
+      const highlightedWords = words.map(word => {
+        if (word.startsWith(text.slice(0, cursorPosition))) {
+          return `<span class="highlight">${word}</span>`;
+        } else {
+          return word;
+        }
+      });
+      return highlightedWords.join(' ');
+    }
+  </script>
 </body>
-
-
 
 </html>
 

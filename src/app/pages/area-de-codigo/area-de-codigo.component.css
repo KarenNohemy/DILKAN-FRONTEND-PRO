@@ -5,7 +5,16 @@
   gap: 10px;
 }
 
-.iframe {
+.text-area {
   flex: 1 0 45%;
   background-color: #474A57;
+  width: 400px;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.highlight {
+  background-color: rgb(14, 204, 229);
 }
