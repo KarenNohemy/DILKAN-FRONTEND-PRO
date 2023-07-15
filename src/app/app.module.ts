@@ -13,6 +13,10 @@ import { SidebarComponent } from './share/sidebar/sidebar.component';
 import { FooterComponent } from './share/footer/footer.component';
 import { NavbarComponent } from './share/navbar/navbar.component';
 import { PagesComponent } from './pages/pages.component';
+import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
+import { CrearProyectoComponent } from './pages/crear-proyecto/crear-proyecto.component';
+import { AreaDeCodigoComponent } from './pages/area-de-codigo/area-de-codigo.component';
+import { MisProyectosComponent } from './pages/mis-proyectos/mis-proyectos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +28,10 @@ import { PagesComponent } from './pages/pages.component';
     FooterComponent,
     NavbarComponent,
     PagesComponent,
+    MiPerfilComponent,
+    CrearProyectoComponent,
+    AreaDeCodigoComponent,
+    MisProyectosComponent,
   ],
   imports: [
     BrowserModule,

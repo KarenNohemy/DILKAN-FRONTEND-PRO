@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function updateIframeContent(iframeId, code) {
+      var iframe = document.getElementById(iframeId);
+      iframe.contentDocument.documentElement.innerHTML = code;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <textarea id="htmlCode" style="display: none;"><html><body><h1>HTML</h1><p>Edit this HTML code!</p></body></html></textarea>
+    <textarea id="cssCode" style="display: none;">body { background-color: red; color: white; }</textarea>
+    <textarea id="jsCode" style="display: none;">function greet() { alert('Hello, JavaScript!'); }</textarea>
+
+    <iframe id="htmlIframe" class="iframe" width="400" height="300" srcdoc=""></iframe>
+    <iframe id="cssIframe" class="iframe" width="400" height="300" srcdoc=""></iframe>
+    <iframe id="jsIframe" class="iframe" width="400" height="300" srcdoc=""></iframe>
+    <iframe id="pantallaIframe" class="iframe" width="400" height="300" srcdoc=""></iframe>
+  </div>
+</body>
+
+
+
+</html>
+
+
+

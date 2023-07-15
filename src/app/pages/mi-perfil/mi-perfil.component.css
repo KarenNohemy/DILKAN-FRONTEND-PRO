@@ -1,0 +1,236 @@
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px; }
+
+body {
+    font-family: 'Inter';
+    color: #1a1a1a;
+    background-color: #D9E8EF;
+    }
+
+/*SECCIÓN DE IMAGEN*/
+.modal {
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 100vh;
+  width: 60vw;
+  padding-top: 2%;
+  padding-left: 20%;
+  z-index: 100;
+overflow-y: auto;
+}
+
+.modal__container {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 675px;
+  min-height: 100px;
+  margin-bottom: 125px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+}
+.modal__featured {
+  position: relative;
+  -ms-flex: 1;
+      flex: 1;
+  min-width: 230px;
+  padding: 20px;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.modal__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200%;
+  width: 200%;
+  border-radius: 50%;
+  -ms-transform: translateX(-50%) translateY(-25%);
+  transform: translateX(-50%) translateY(-25%);
+  background: linear-gradient(to bottom, #1D4FB5, #655BC9, #A666DC);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.modal__logo {
+  position: absolute;
+  top: 25%;
+  left: 52%;
+  max-width: 85%;
+  -ms-transform: translateX(calc(-50% - 10px));
+      transform: translateX(calc(-50% - 10px));
+}
+/*TXT: MI PERFIL*/
+.text-inicio {
+  -ms-flex: 3;
+      flex: 3;
+  padding: 50px 40px;
+  text-align: center;
+  line-height: 100%;
+  color: #18191F
+}
+
+/*FORMULARIO*/
+.formulario{
+  padding: 2%;
+}
+
+/*INPUTS*/
+input {
+  height: 35px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  }
+  input:valid {
+    border-color: #d9d9d9;
+    border: 3px solid #7e8ad2; }
+  input:focus {
+    outline: none;
+    border-color: #695CCA; }
+  input::placeholder{
+    text-align: left;
+    vertical-align: top;
+    font-size: large;
+    font-family: Inter;
+    font-weight: bold;
+    line-height: 32%;
+    color: #474a57;
+  }
+
+/*TEXTO DE CORREO Y USUARIO*/
+.text-label{
+  text-align: left;
+  vertical-align: top;
+  font-size: x-large;
+  font-family: Inter;
+  line-height: 32%;
+  color: #474a57;
+}
+
+/*BOTONES*/
+
+  /*GUARDAR CAMBIOS*/
+  .button-g {
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    background-color: #379ad6;
+    color: #ffff;
+    font-family: Inter;
+    font-weight: bold;
+    font-size:medium;
+    margin-top: 55%;
+    min-width: 112%; /* Puedes ajustar el valor según tus necesidades */
+    margin-right: 10px;
+  }
+
+
+
+
+/*ELIMINAR CUENTA*/
+.button-e {
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  background-color: #d64237;
+  color: #ffff;
+  font-family: Inter;
+  font-weight: bold;
+  font-size: medium;
+  margin-top: 60%;
+  min-width: 107%;
+  margin-left: 15px;
+}
+
+
+/*CAMBIAR FOTO DE PERFIL*/
+
+.button2 {
+  height: 35px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  border-color: #695CCA;
+  margin-top: 50px; /* Puedes ajustar el valor según tus necesidades */
+  color: #474a57;
+  font-family: Inter;
+  font-weight: bold;
+  font-size: large;
+}
+
+
+/*Foto del usuario*/
+
+.btn-txt{
+  display:inline-flex;
+}
+
+  /*FOTO*/
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  margin-right: 10px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  margin-top: 20%;
+  margin-left: 10%;
+}
+.circle img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*CSS**/
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+

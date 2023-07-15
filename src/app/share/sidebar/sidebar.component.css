@@ -6,7 +6,7 @@
   font-family: 'Poppins',sans-serif;
 }
 body{
-  background: #2EC5CE;
+  overflow-x: hidden;
 }
 .side_bar{
   position: relative;
@@ -44,8 +44,7 @@ body{
   font-weight: 600;
   padding : 10px 25px;
   border-radius: 6px;
-  box-shadow: -3px -3px 7px #7368c4, #aa98dc, #ddcef8,
-             3px 3px 5px #2EC5CE;
+  box-shadow: -3px -3px 7px #7368c4, #aa98dc, #ddcef8;
   position: relative;
   transition: all 0.2s ease;
 }

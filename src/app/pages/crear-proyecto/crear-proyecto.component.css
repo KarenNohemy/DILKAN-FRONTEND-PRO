@@ -4,26 +4,25 @@
   height: 1px;
   margin: -1px;
   overflow: hidden;
-  padding: 0;
   position: absolute;
   width: 1px; }
 
 body {
     font-family: 'Inter';
     color: #1a1a1a;
-    background-color: #D9E8EF; }
+    background-color: #D9E8EF;
+    }
 
 /*SECCIÓN DE IMAGEN*/
 .modal {
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
   height: 100vh;
-  width: 100vw;
-  padding-top: 20px;
+  width: 60vw;
+  padding-top: 2%;
+  padding-left: 20%;
   z-index: 100;
 overflow-y: auto;
 }
@@ -32,7 +31,7 @@ overflow-y: auto;
   display: -ms-flexbox;
   display: flex;
   max-width: 675px;
-  min-height: 400px;
+  min-height: 100px;
   margin-bottom: 125px;
   background-color: #ffffff;
   border-radius: 5px;
@@ -72,7 +71,7 @@ overflow-y: auto;
   -ms-transform: translateX(calc(-50% - 10px));
       transform: translateX(calc(-50% - 10px));
 }
-/*INICIO DE DESICÓN*/
+/*TXT:*/
 .text-inicio {
   -ms-flex: 3;
       flex: 3;
@@ -101,10 +100,16 @@ input {
     outline: none;
     border-color: #695CCA; }
   input::placeholder{
-    color: rgba(84, 67, 95, 0.861);
+    text-align: left;
+    vertical-align: top;
+    font-size: large;
+    font-family: Inter;
+    font-weight: bold;
+    line-height: 32%;
+    color: #474a57;
   }
 
-/*TEXTO DE CORREO Y CONTRASEÑA*/
+/*TEXTO DE PROYECTO Y COLAB*/
 .text-label{
   text-align: left;
   vertical-align: top;
@@ -113,7 +118,36 @@ input {
   line-height: 32%;
   color: #474a57;
 }
-/*BOTON DE INICIAR*/
+
+
+
+
+/*Colab*/
+.colab {
+  height: 35px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  }
+  .colab:valid {
+    border-color: #d9d9d9;
+    border: 3px solid #7e8ad2; }
+  .colab:focus {
+    outline: none;
+    border-color: #695CCA; }
+  .colab option {
+    text-align: left;
+    vertical-align: middle;
+    font-family: Inter;
+    font-size:large;
+    font-weight: 500;
+    line-height: 70%;
+    color: #656872;
+  }
+
+
+
+  /*BOTON DE INICIAR*/
 .button {
   color: #ffffff;
   background: linear-gradient(to bottom, #30a3ea, #379ad6, #bf72d2);
@@ -133,50 +167,6 @@ input {
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
   transition: all .2s;
   border-radius: 0.5rem;}
-
-
-/*BOTON DE VOLVER*/
-.button--transparent {
-  background: transparent;
-  border: 0;
-  outline: 0; }
-
-.button--close {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  width: 30px;
-  height: 30px;
-  color: #ffffff;
-  border-radius: 50%;
-  transition: all .25s;
-  z-index: 10; }
-  .button--close svg {
-    width: 20px;
-    height: 20px; }
-    .button--close svg * {
-      fill: currentColor; }
-  .button--close:hover, .button--close:active, .button--close:focus {
-    color: #695CCA;
-    background-color: #ffffff;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1); }
-
-  /*Link de ir a registro*/
-a{
-  font-size: large;
-  color: #474A57;
-
-}
-a:hover{
-  color: #695CCA;
-  cursor: pointer;
-}
 
 
 
