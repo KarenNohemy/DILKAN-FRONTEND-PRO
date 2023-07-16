@@ -16,28 +16,7 @@
     <textarea id="pantalla" class="text-area"  width="400" height="300" srcdoc=""></textarea>
   </div>
 
-  <script>
-    const textAreas = document.getElementsByClassName('text-area');
 
-    Array.from(textAreas).forEach(textArea => {
-      textArea.addEventListener('input', () => {
-        const highlightedText = highlightText(textArea.value, textArea.selectionStart);
-        textArea.innerHTML = highlightedText;
-      });
-    });
-
-    function highlightText(text, cursorPosition) {
-      const words = text.split(' ');
-      const highlightedWords = words.map(word => {
-        if (word.startsWith(text.slice(0, cursorPosition))) {
-          return `<span class="highlight">${word}</span>`;
-        } else {
-          return word;
-        }
-      });
-      return highlightedWords.join(' ');
-    }
-  </script>
 </body>
 
 </html>
