@@ -19,4 +19,8 @@ export class RegistroComponent {
 
   constructor(private fb: FormBuilder){}
 
+  crearUsuario(){
+    console.log(this.registerForm.value);
+  }
+
 }

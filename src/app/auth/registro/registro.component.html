@@ -13,7 +13,7 @@
     <div class="modal__container">
       <div class="modal__featured">
        <!--BOTON PARA REGRESAR-->
-        <button type="button" class="button--transparent button--close">
+        <button type="button" class="button--transparent button--close" routerLink="/landingpage">
           <svg class="nc-icon glyph" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
             <g>
               <path fill="#ffffff" d="M1.293,15.293L11,5.586L12.414,7l-8,8H31v2H4.414l8,8L11,26.414l-9.707-9.707 C0.902,16.316,0.902,15.684,1.293,15.293z"></path>
@@ -36,7 +36,10 @@
             Continue con Facebook
         </button>
 
-        <form class="formulario">
+        <form class="formulario"
+        autocomplete="off"
+        [formGroup]="registerForm"
+        (ngSubmit)="crearUsuario">
 
           <div class="btn-txt">
             <p class="p">Foto de perfil</p>
@@ -46,14 +49,15 @@
               </div>
              Foto
             </label>
-            <input type="file" id="upload" accept="image/*" style="display: none;">
+            <input type="file" id="upload" accept="image/*" style="display: none;"
+            formControlName="foto">
           </div>
 
 
 
-          <input type="email" class="input" placeholder="Nombre completo">
-          <input type="password" class="input" placeholder="Correo electrónico">
-          <input type="password" class="input" placeholder="Contraseña">
+          <input type="text" class="input" placeholder="Nombre completo" formControlName="nombre">
+          <input type="email" class="input" placeholder="Correo electrónico" formControlName="correo">
+          <input type="password" class="input" placeholder="Contraseña" formControlName="contrasenia">
 
 
           <div class="btn-txt">
@@ -65,11 +69,13 @@
             </button>
           </div>
 
-          <button class="button" routerLink="/mis-proyectos">CREAR CUENTA</button>
+          <button type="submit" class="button" routerLink="/mis-proyectos">CREAR CUENTA</button>
           <div class="a">
             <a routerLink="/login">¿Ya tienes una cuenta? Iniciar seción</a>
           </div>
         </form>
+
+
       </div> <!-- END: .modal__content -->
     </div> <!-- END: .modal__container -->
   </div> <!-- END: .modal -->
