@@ -7,6 +7,10 @@ import { ComponentModule } from '../component/component.module';
 
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
+import { ModalComponent } from './modal-plan/modal.component';
+import { ModalEliminarPerfilComponent } from './modal-eliminarPerfil/modal-eliminar-perfil.component';
+import { PruebaComponent } from './prueba/prueba.component';
+import { MiComponenteComponent } from './MiComponente/mi-componente.component';
 
 
 
@@ -14,6 +18,10 @@ import { RegistroComponent } from './registro/registro.component';
   declarations: [
     LoginComponent,
     RegistroComponent,
+    ModalComponent,
+    ModalEliminarPerfilComponent,
+    PruebaComponent,
+    MiComponenteComponent,
   ],
   exports:[
     LoginComponent,

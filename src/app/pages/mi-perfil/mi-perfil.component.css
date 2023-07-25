@@ -157,7 +157,7 @@ input {
   font-family: Inter;
   font-weight: bold;
   font-size: medium;
-  margin-top: 60%;
+  margin-top: 53%;
   min-width: 107%;
   margin-left: 15px;
 }
@@ -227,6 +227,10 @@ input {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+}
+
+.pyp{
+  margin-top: 8%;
 }
 
 

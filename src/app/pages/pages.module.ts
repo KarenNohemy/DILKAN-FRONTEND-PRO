@@ -8,6 +8,7 @@ import { CrearProyectoComponent } from './crear-proyecto/crear-proyecto.componen
 import { AreaDeCodigoComponent } from './area-de-codigo/area-de-codigo.component';
 import { MisProyectosComponent } from './mis-proyectos/mis-proyectos.component';
 import { ShareModule } from '../share/share.module';
+import { ComponentModule } from '../component/component.module';
 
 
 
@@ -28,6 +29,7 @@ import { ShareModule } from '../share/share.module';
     CommonModule,
     ShareModule,
     RouterModule,
+    ComponentModule
   ],
 })
 export class PagesModule { }

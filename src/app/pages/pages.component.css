@@ -9,6 +9,29 @@ header {
   background-color: #f2f2f2;
 }
 
+/*BOTONES*/
+#btnR{
+  position: absolute;
+  top: 7%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+.content {
+  z-index: 1;
+  cursor: pointer;
+}
+.btn-1, .btn-2 {
+  color: #27282c;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background:  #FDCD00 50%;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+
 main {
   flex: 1;
   display: flex;

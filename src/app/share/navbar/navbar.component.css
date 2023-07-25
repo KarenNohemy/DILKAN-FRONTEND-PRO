@@ -4,29 +4,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-/*ENLACES*/
-
-.list .enlaces li a{
-  color: #F1E4FF;
-}
-.enlaces{
-  display: flex;
-  list-style: none;
-  padding: 10;
-  margin: 10px;
-  gap: 30px;
+  top:0%;
 }
 
-/*LOGO*/
-.logo {
-  display: flex;
-  align-items: center;
-  color: #F1E4FF;
-}
+  /*LOGO*/
+  .logo {
+    display: flex;
+    align-items: center;
+    color: #F1E4FF;
+    justify-content: center;
+  }
 
-.logo img {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
+  .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+

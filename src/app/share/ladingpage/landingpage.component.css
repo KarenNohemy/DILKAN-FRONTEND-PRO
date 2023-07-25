@@ -1,6 +1,68 @@
 body{
   background-color: #EEEFF4;
 }
+
+/* Estilo del componente "app-navbar" */
+app-navbar {
+  position: relative; /* Asegura que el componente tenga posición relativa */
+  z-index: 0; /* Establece el z-index menor para que los enlaces aparezcan encima */
+}
+
+
+
+/* ENLACES */
+.list .enlaces {
+  position: absolute; /* Posiciona los enlaces de forma absoluta */
+  top: 20px; /* Ajusta la distancia desde arriba según tus necesidades */
+  margin-left:5%;
+  z-index: 1; /* Establece un z-index mayor para que los enlaces aparezcan encima del navbar */
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center; /* Centrar verticalmente los enlaces */
+}
+
+.list .enlaces li a {
+  color: #e5deec;
+}
+
+
+/*BOTONES*/
+#btnR{
+    position: absolute;
+    top: 7%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+#btnI{
+  position: absolute;
+  top: 7%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+/* Estilo de los botones */
+.content {
+  z-index: 1;
+  cursor: pointer;
+}
+.btn-1, .btn-2 {
+  color: #474A57;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background:  #FDCD00 50%;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.btn-2 {
+color: #18191F;
+}
+
+
+
+
+
 .content {
   display: flex;
   flex-direction: column;
