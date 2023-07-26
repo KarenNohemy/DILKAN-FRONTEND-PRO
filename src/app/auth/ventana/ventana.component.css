@@ -1,0 +1,83 @@
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+body {
+    font-family: 'Inter';
+    color: #1a1a1a;}
+
+/*MODAL*/
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: #DEEBF1;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000;
+
+}
+
+/*TITULO*/
+.text-inicio {
+  -ms-flex: 3;
+      flex: 3;
+  padding: 50px 40px;
+    text-align: center;
+    line-height: 100%;
+    color: #18191F
+}
+
+
+
+/* Ajustes para los botones */
+/* Ajustes para los botones */
+.button-A,
+.button-C {
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  font-family: Inter;
+  font-weight: bold;
+  font-size: medium;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.button-A {
+  background-color: #379AD6;
+  color: #ffff;
+}
+
+.button-C {
+  background-color: #474A57;
+  color: #ffff;
+}
+
+

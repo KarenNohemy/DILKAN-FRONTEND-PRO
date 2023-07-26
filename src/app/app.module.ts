@@ -12,6 +12,7 @@ import { ShareModule } from "./share/share.module";
 import { AppComponent } from './app.component';
 import { PagesComponent } from './pages/pages.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [

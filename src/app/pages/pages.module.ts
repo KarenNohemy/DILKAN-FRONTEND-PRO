@@ -29,7 +29,9 @@ import { ComponentModule } from '../component/component.module';
     CommonModule,
     ShareModule,
     RouterModule,
-    ComponentModule
+    ComponentModule,
+    CommonModule,
+    RouterModule
   ],
 })
 export class PagesModule { }

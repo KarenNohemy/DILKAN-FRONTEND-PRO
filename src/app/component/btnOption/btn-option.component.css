@@ -1,0 +1,66 @@
+/* Alineación de los botones en la esquina superior derecha */
+.btn-option {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Estilos para los botones de la esquina superior derecha */
+.btn-option button {
+  background:  #FDCD00 50%;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#save:hover {
+  background-color: #3fd637; /* Cambia el color al posicionarse sobre el botón */
+}
+
+#close:hover {
+  background-color: #E44D26;
+}
+
+#do:hover{
+  background-color: #379AD6;
+}
+
+#undo:hover{
+  background-color: #379AD6;
+}
+
+/* Alineación del elemento de agregar colaborador a la izquierda */
+.agregar-colaborador {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: 10px;
+  padding: 10px 15px;
+}
+
+/* Estilos para el campo de texto y los botones de agregar colaborador */
+.agregar-colaborador input {
+  height: 30px;
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.agregar-colaborador button {
+  height: 30px;
+  padding: 5px 10px;
+  background-color: #695CCA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.agregar-colaborador button:hover {
+  background-color: #5b4cbf;
+}

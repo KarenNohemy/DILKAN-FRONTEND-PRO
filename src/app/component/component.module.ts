@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BtnOptionComponent } from './btnOption/btn-option.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ]
 })
 export class ComponentModule { }

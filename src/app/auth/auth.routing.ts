@@ -7,6 +7,7 @@ import { ModalComponent } from './modal-plan/modal.component';
 import { ModalEliminarPerfilComponent } from './modal-eliminarPerfil/modal-eliminar-perfil.component';
 import { PruebaComponent } from './prueba/prueba.component';
 import { MiComponenteComponent } from './MiComponente/mi-componente.component';
+import { VentanaComponent } from './ventana/ventana.component';
 
 
 
@@ -19,7 +20,8 @@ const routes: Routes = [
  {path: 'modal', component: ModalComponent},
  {path: 'modal-eliminarPerfil', component: ModalEliminarPerfilComponent},
  {path:'prueba', component: PruebaComponent},
- {path: 'MiComponente', component: MiComponenteComponent}
+ {path: 'MiComponente', component: MiComponenteComponent},
+ {path: 'ventana', component: VentanaComponent}
 ]
 
 @NgModule({
