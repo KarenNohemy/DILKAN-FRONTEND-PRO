@@ -104,7 +104,6 @@ input {
     vertical-align: top;
     font-size: large;
     font-family: Inter;
-    font-weight: bold;
     line-height: 32%;
     color: #474a57;
   }
@@ -119,31 +118,6 @@ input {
   color: #474a57;
 }
 
-
-
-
-/*Colab*/
-.colab {
-  height: 35px;
-  width: 100%;
-  border-radius: 10px;
-  background-color: #d9d9d9;
-  }
-  .colab:valid {
-    border-color: #d9d9d9;
-    border: 3px solid #7e8ad2; }
-  .colab:focus {
-    outline: none;
-    border-color: #695CCA; }
-  .colab option {
-    text-align: left;
-    vertical-align: middle;
-    font-family: Inter;
-    font-size:large;
-    font-weight: 500;
-    line-height: 70%;
-    color: #656872;
-  }
 
 
 
@@ -166,8 +140,65 @@ input {
   outline: 0;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
   transition: all .2s;
-  border-radius: 0.5rem;}
+  border-radius: 0.5rem;
+  cursor: pointer;}
 
+
+
+  /* Estilos para el campo de texto y los botones de agregar colaborador */
+.agregar-colaborador input {
+  height: 35px;
+  width: 80%;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+}
+.agregar-colaborador input:valid {
+  border-color: #d9d9d9;
+  border: 3px solid #7e8ad2; }
+  .agregar-colaborador input:focus {
+  outline: none;
+  border-color: #695CCA; }
+
+.agregar-colaborador button {
+  height: 30px;
+  padding: 5px 10px;
+  background-color: #695CCA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 2%;
+}
+
+.agregar-colaborador button:hover {
+  background-color: #5b4cbf;
+}
+
+
+
+
+/*Colab
+.colab {
+  height: 35px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  }
+  .colab:valid {
+    border-color: #d9d9d9;
+    border: 3px solid #7e8ad2; }
+  .colab:focus {
+    outline: none;
+    border-color: #695CCA; }
+  .colab option {
+    text-align: left;
+    vertical-align: middle;
+    font-family: Inter;
+    font-size:large;
+    font-weight: 500;
+    line-height: 70%;
+    color: #656872;
+  }*/
 
 
 

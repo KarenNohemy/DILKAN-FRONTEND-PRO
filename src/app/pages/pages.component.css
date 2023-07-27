@@ -9,6 +9,26 @@ header {
   background-color: #f2f2f2;
 }
 
+#user{
+  position: absolute;
+  top: -2%;
+  left: 8%;
+  transform: translate(10%, 10%);
+}
+
+.profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transform: translate(0%,41%);
+}
+
+#username {
+  font-weight: bold;
+  color: #ffffff;
+}
+
 /*BOTONES*/
 #btnR{
   position: absolute;
@@ -78,3 +98,4 @@ main {
 .content-text {
   margin-bottom: 0;
 }
+

@@ -219,14 +219,14 @@ color: #18191F;
 .plan {
   width: 260px;
   padding: 20px 1px;
-  margin: 30px;
+  margin: 50px;
+  margin-left: 100px;
   text-align: center;
   position: relative;
   border-radius: 10px;
   background-color: #474A57;
   background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%);
   padding: 20px;
-  margin: 0 10px;
 }
 
 .content-plan .price {
