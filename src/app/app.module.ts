@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { PagesComponent } from './pages/pages.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -28,6 +29,8 @@ import { RouterModule } from '@angular/router';
         PagesModule,
         ShareModule,
         AuthModule,
+        RouterModule,
+        HttpClientModule
     ]
 })
 

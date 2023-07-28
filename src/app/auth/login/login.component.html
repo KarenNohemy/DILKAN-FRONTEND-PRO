@@ -18,15 +18,18 @@
       <h1>INICIO DE SECIÓN</h1>
 
       <form class="formulario">
-        <h3  class="text-label">Correo electrónico:</h3>
-        <input type="email" class="input" placeholder="karen.lopez@gmail.com  ">
-        <h3  class="text-label">Contraseña:</h3>
-        <input type="password" class="input">
-        <button class="button" routerLink="/mis-proyectos">INICIAR</button>
+        <!-- Utiliza [(ngModel)] junto con el atributo 'name' o 'ngModelOptions' -->
+        <h3 class="text-label">Correo electrónico:</h3>
+        <input type="email" class="input" placeholder="karen.lopez@gmail.com" [(ngModel)]="correoElectronico" name="correoElectronico">
+        <h3 class="text-label">Contraseña:</h3>
+        <input type="password" class="input" [(ngModel)]="contrasena" name="contrasena">
+        <!-- Llama al método iniciarSesion() cuando se haga clic en el botón -->
+        <button class="button" (click)="iniciarSesion()">INICIAR</button>
         <div class="a">
-          <a routerLink="/registro" >¿No tienes una cuenta? Registrate</a>
+          <a routerLink="/registro">¿No tienes una cuenta? Registrate</a>
         </div>
       </form>
+      
     </div> <!-- END: .modal__content -->
   </div> <!-- END: .modal__container -->
-</div> <!-- END: .modal -->
+</div> <!-- END: .modal  routerLink="/mis-proyectos"@  -->
