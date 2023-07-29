@@ -2,8 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
       <!--FONT AWESON-->
@@ -13,9 +11,14 @@
 <body>
 
   <div class="agregar-colaborador">
-    <input type="text" placeholder="Nombre del colaborador" [(ngModel)]="nuevoColaborador">
+    <input type="text" placeholder="Nombre del colaborador" >  <!-- [(ngModel)]="nuevoColaborador"-->
     <button (click)="agregarColaborador()"> <i class="fas fa-plus"></i> </button>
-    <button (click)="agregarColaborador()">Ver colaboradores</button>
+
+     <!-- <button (click)="agregarColaborador()">Ver colaboradores</button> -->
+      <select class="agregar-colaborador" aria-placeholder="Ver Colaboradores">
+              <option value="name">Dilan Alamendares </option>
+              <option value="name">Karen Lopez </option>
+      </select>
   </div>
 
 

@@ -4,17 +4,15 @@ import { BtnOptionComponent } from './btnOption/btn-option.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [
     BtnOptionComponent
   ],
   exports:[
-    BtnOptionComponent
+    BtnOptionComponent,
+    FormsModule
   ],
   imports: [
-    CommonModule,
     CommonModule,
     RouterModule,
     FormsModule

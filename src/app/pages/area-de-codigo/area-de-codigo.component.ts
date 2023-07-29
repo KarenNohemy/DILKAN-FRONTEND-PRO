@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./area-de-codigo.component.css']
 })
 export class AreaDeCodigoComponent implements OnInit {
+
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
