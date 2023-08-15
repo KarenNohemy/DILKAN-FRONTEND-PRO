@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -16,9 +17,12 @@ export class UsuarioService {
 
 
   //REGISTRO DE USUARIO 
-  registrarUsuario() {
-    // Lógica para registrar un usuario aquí
+  registrarUsuario ( datosUsuario: any): Observable<any> {
+    const url = `${this.apiUrl}/usuarios/crear`;
+    return this.http.post(url, datosUsuario);
   }
+    
+  
 
      // Lógica del componente de planes 
      mostrarFormularioModal: boolean = false;

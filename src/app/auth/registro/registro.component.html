@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--FONT AWESON-->
+  <!-- FONT AWESON -->
   <script src="https://kit.fontawesome.com/37598b2d44.js" crossorigin="anonymous"></script>
 
 </head>
@@ -14,7 +14,7 @@
   <div class="modal">
     <div class="modal__container">
       <div class="modal__featured">
-        <!--BOTON PARA REGRESAR-->
+        <!-- BOTON PARA REGRESAR -->
         <button type="button" class="button--transparent button--close" routerLink="/landingpage">
           <svg class="nc-icon glyph" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
@@ -48,7 +48,7 @@
           Continue con Facebook
         </button>
 
-        <form class="formulario" autocomplete="off" [formGroup]="registerForm" (ngSubmit)="crearUsuario">
+        <form class="formulario" autocomplete="off" [formGroup]="registerForm" (ngSubmit)="crearUsuario()">
 
           <div class="btn-txt">
             <p class="p">Foto de perfil</p>
@@ -61,15 +61,12 @@
             <input type="file" id="upload" accept="image/*" style="display: none;" formControlName="foto">
           </div>
 
-
-
           <input type="text" class="input" placeholder="Nombre completo" formControlName="nombre">
           <input type="email" class="input" placeholder="Correo electrónico" formControlName="correo">
           <input type="password" class="input" placeholder="Contraseña" formControlName="contrasenia">
 
-
           <div class="btn-txt">
-            <p class="p">Seleciona un plan</p>
+            <p class="p">Selecciona un plan</p>
             <button class="button2" (click)="mostrarModal()">
               <div class="circle" id="plan">
                 <img src="assets/IMG/verPlanes.png">
@@ -77,17 +74,14 @@
             </button>
           </div>
 
-          <button type="submit" class="button" routerLink="/mis-proyectos">CREAR CUENTA</button>
+          <button type="submit" class="button" (click)="crearUsuario()">CREAR CUENTA</button>
           <div class="a">
-            <a routerLink="/login">¿Ya tienes una cuenta? Iniciar seción</a>
+            <a routerLink="/login">¿Ya tienes una cuenta? Iniciar sesión</a>
           </div>
         </form>
 
         <div *ngIf="mostrarFormularioModal" class="modal">
-          
           <div class="modal-contenido">
-            <!-- Contenido del formulario modal aquí -->
-
             <section class="seccion_plan">
               <div class="izquierda">
                 <h3 class="text_plan">Tipo de plan:</h3>
@@ -98,28 +92,22 @@
               </div>
 
               <div class="derecha">
-
-                <select class="planes_plan">
-                  <option value="avanzado">Avanzado </option>
+                <select class="planes_plan" formControlName="plan">
+                  <option value="avanzado">Avanzado</option>
                   <option value="basico">Básico</option>
                   <option value="free">Free</option>
                 </select>
-                <input id="input_plan" type="text" for="costoMensual">
-                <input id="input_plan" type="date" for="fecha">
-                <input id="input_plan" type="date" for="fecha">
+                <input type="text" class="input" placeholder="Costo mensual" formControlName="plan.costoMensual">
+                <input type="date" class="input" placeholder="Fecha de inicio" formControlName="plan.fechaInicio">
+                <input type="date" class="input" placeholder="Fecha final" formControlName="plan.fechaFinal">
                 <button (click)="cerrarModal()" class="button-C">Cerrar</button>
               </div>
             </section>
           </div>
         </div>
-
-
       </div> <!-- END: .modal__content -->
     </div> <!-- END: .modal__container -->
   </div> <!-- END: .modal -->
-
-
-
 
 </body>
 
