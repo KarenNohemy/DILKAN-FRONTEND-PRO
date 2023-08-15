@@ -25,6 +25,7 @@ export class RegistroComponent {
   }
 
 
+
    // Lógica de tu componente aquí.
    mostrarFormularioModal: boolean = false;
 

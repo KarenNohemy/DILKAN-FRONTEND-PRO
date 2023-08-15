@@ -1,5 +1,4 @@
 
-
 <div class="modal">
   <div class="modal__container">
     <div class="modal__featured">
@@ -14,7 +13,7 @@
             <h3 class="text">Costo mensual:</h3>
             <h3 class="text">Fecha de inicio:</h3>
             <h3 class="text">Fecha final:</h3>
-            <button class="button-A" routerLink="/registro">ACEPTAR</button>
+            <button class="button-A" (click)="guardarInfo()">ACEPTAR</button>
           </div>
 
           <div class="derecha">
@@ -27,7 +26,7 @@
             <input  class="input" type="text" for="costoMensual">
             <input class="input" type="date" for="fecha">
             <input class="input" type="date" for="fecha">
-            <button class="button-C" routerLink="/registro">CANCELAR</button>
+            <button class="button-C" (click)="cerrarModal()">CANCELAR</button>
           </div>
         </section>
       </form>

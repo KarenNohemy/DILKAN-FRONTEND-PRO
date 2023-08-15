@@ -317,4 +317,150 @@ input {
   background-color: #379ad6;
 }
 
+/*
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+MODAL DE PLANES
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* registro.component.css */
+.modal {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+overflow-y: auto;
 
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+
+border-radius: 10px;
+box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+border: 2px solid #000;
+}
+
+.modal-contenido {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 400px;
+  min-height: 200px;
+  margin-bottom: 0%;
+  background-color: #DEEBF1;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000;
+}
+
+/*TITULO*/
+.h1 {
+  display: flex;
+  padding: 50px 40px;
+  text-align: center;
+  line-height: 100%;
+  color: #18191F
+}
+
+
+/*SECCIÓN*/
+.seccion {
+  display: flex;  
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 16%; /* Ajusta el margen inferior según tus necesidades */
+  padding: 0px;
+}
+
+.izquierda {
+  text-align: left;
+  width: 100%;
+  padding: 5%;
+}
+
+.derecha {
+  text-align: right;
+  width: 80%;
+  padding: 5%;
+}
+
+/*TEXTO DE OPCIONES*/
+.text_plan{
+  text-align: left;
+  font-family: Inter;
+  line-height: 100%;
+  color: #474a57;
+  display: block;
+  font-size: 18px; /* Ajusta el tamaño de fuente según tus necesidades */
+  font-weight: bold;
+  margin-bottom: 5px ; /* Ajusta el margen inferior según tus necesidades */
+  scroll-padding-block: 0%;
+  margin-bottom: 10%;
+  margin-left: 0%; 
+  margin-top: 5%;
+}
+
+/*INPUTS*/
+#input_plan {
+  height: 30px;
+  width: 50%;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  }
+
+/*planes*/
+.planes_plan {
+  height: 35px;
+  width: 55%;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  }
+  .planes_plan:valid {
+    border-color: #d9d9d9;
+    border: 3px solid #7e8ad2; }
+  .planes_plan:focus {
+    outline: none;
+    border-color: #695CCA; }
+  .planes_plan option {
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 500;
+    line-height: 70%;
+    color: #474a52;
+  }
+
+
+
+/* Ajustes para los botones */
+.button-A,
+.button-C {
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  font-family: Inter;
+  font-weight: bold;
+  font-size: medium;
+  margin-top: 20px;
+  margin-left: 10%;
+}
+.button-C {
+  background-color: #474A57;
+  color: #ffff;
+}
