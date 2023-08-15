@@ -1,1 +1,12 @@
-<p>mi-componente works!</p>
+<!-- registro.component.html -->
+<form>
+  <!-- Campos de registro aquí -->
+  <button (click)="mostrarModal()">Mostrar Formulario Modal</button>
+</form>
+
+<div *ngIf="mostrarFormularioModal" class="modal">
+  <div class="modal-contenido">
+    <!-- Contenido del formulario modal aquí -->
+    <button (click)="cerrarModal()">Cerrar</button>
+  </div>
+</div>

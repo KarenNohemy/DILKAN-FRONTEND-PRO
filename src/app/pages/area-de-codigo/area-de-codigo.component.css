@@ -8,7 +8,7 @@
 
 .text-area {
   flex: 1 0 45%;
-  background-color: #474A57;
+  background-color: #474A57ff;
   width: 400px;
   height: 300px;
   padding: 10px;
@@ -16,9 +16,7 @@
   border-radius: 4px;
 }
 
-.highlight {
-  background-color: rgb(14, 204, 229);
-}
+
 /*IMAGENES*/
 .circle img {
   width: 100px; /* Ajusta el tamaño según tus necesidades */

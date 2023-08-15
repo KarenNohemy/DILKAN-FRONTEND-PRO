@@ -3,18 +3,19 @@ import { PruebaComponent } from '../prueba/prueba.component';
 
 @Component({
   selector: 'app-mi-componente',
-  template: `
-    <button (click)="openModal()">Abrir Modal</button>
-    <app-modal *ngIf="modalOpen"></app-modal>
-  `,
+  templateUrl: './mi-componente.component.html',
   styleUrls: ['./mi-componente.component.css']
 })
 export class MiComponenteComponent {
   // Lógica de tu componente aquí.
-  modalOpen: boolean = false;
+  mostrarFormularioModal: boolean = false;
 
-  openModal() {
-    this.modalOpen = true;
+  mostrarModal() {
+    this.mostrarFormularioModal = true;
+  }
+
+  cerrarModal() {
+    this.mostrarFormularioModal = false;
   }
 }
 

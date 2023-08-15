@@ -4,20 +4,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top:0%;
+  top: 0%;
 }
 
-  /*LOGO*/
-  .logo {
-    display: flex;
-    align-items: center;
-    color: #F1E4FF;
-    justify-content: center;
-  }
+/*LOGO*/
+.logo {
+  display: flex;
+  align-items: center;
+  color: #F1E4FF;
+  justify-content: center;
+  flex-grow: 1; /* El div .logo ocupará el espacio disponible */
+}
 
-  .logo img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}

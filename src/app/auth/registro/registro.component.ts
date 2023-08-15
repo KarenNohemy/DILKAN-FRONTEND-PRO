@@ -23,9 +23,17 @@ export class RegistroComponent {
   crearUsuario(){
     console.log(this.registerForm.value);
   }
-  modalOpen: boolean = false;
 
-  openModal() {
-    this.modalOpen = true;
+
+   // Lógica de tu componente aquí.
+   mostrarFormularioModal: boolean = false;
+
+
+  mostrarModal() {
+    this.mostrarFormularioModal = true;
+  }
+
+  cerrarModal() {
+    this.mostrarFormularioModal = false;
   }
 }

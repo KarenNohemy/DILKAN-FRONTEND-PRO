@@ -62,7 +62,7 @@
 
           <div class="btn-txt">
             <p class="p">Seleciona un plan</p>
-            <button class="button2" routerLink="/modal">
+            <button class="button2" (click)="mostrarModal()">
               <div class="circle" id="plan">
                 <img src="assets/IMG/verPlanes.png" >
               </div>Ver
@@ -75,10 +75,19 @@
           </div>
         </form>
 
+        <div *ngIf="mostrarFormularioModal" class="modal">
+
+            <app-modal></app-modal>
+            <!-- Contenido del formulario modal aquí -->
+          </div>
+
 
       </div> <!-- END: .modal__content -->
     </div> <!-- END: .modal__container -->
   </div> <!-- END: .modal -->
+
+
+
 
 </body>
 </html>

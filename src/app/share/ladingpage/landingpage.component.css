@@ -41,10 +41,7 @@ app-navbar {
   transform: translate(-50%, -50%);
 }
 /* Estilo de los botones */
-.content {
-  z-index: 1;
-  cursor: pointer;
-}
+
 .btn-1, .btn-2 {
   color: #474A57;
   padding: 10px;
@@ -57,6 +54,7 @@ app-navbar {
 }
 .btn-2 {
 color: #18191F;
+margin-left: 20px;
 }
 
 
@@ -97,6 +95,7 @@ color: #18191F;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+
 .card::before {
   content: "";
   position: absolute;
@@ -117,16 +116,40 @@ color: #18191F;
 
 .container {
   display: flex;
-  height: 80%;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-color: #EEEFF4;
-  padding-bottom: 65px;
+  padding: 20px;
 }
 
 .half {
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-width: 300px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .half {
+    flex: 100%;
+  }
+  .content {
+    margin-left: 0%; /* Eliminamos el margen izquierdo en dispositivos pequeños */
+  }
+
+  .content .heading {
+    font-size: 28px; /* Reducimos el tamaño del título para dispositivos pequeños */
+  }
+
+  .content .para {
+    font-size: 12px; /* Reducimos el tamaño del párrafo para dispositivos pequeños */
+
+  }
+
 }
 
 .logos{
@@ -229,6 +252,20 @@ color: #18191F;
   padding: 20px;
 }
 
+@media screen and (max-width: 767px) {
+  .planes {
+    flex-direction: column; /* Cambiamos la dirección del flex container en dispositivos pequeños */
+    align-items: center; /* Centramos los elementos en el eje transversal (vertical) */
+  }
+
+  .plan {
+    margin: 10px;
+    width: 100%; /* Establecemos el ancho al 100% para que ocupe toda la pantalla en dispositivos pequeños */
+    width: 60px;
+
+  }
+}
+
 .content-plan .price {
   color: #F4F5F7;
   font-weight: 800;
@@ -261,3 +298,4 @@ color: #18191F;
   width: 150px; /* Ajusta el tamaño según tus necesidades */
   border-radius: 10%; /* Crea bordes redondeados */
 }
+
