@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import {RouterModule} from '@angular/router'
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { MiPerfilComponent } from './mi-perfil/mi-perfil.component';
 import { CrearProyectoComponent } from './crear-proyecto/crear-proyecto.component';
@@ -26,12 +28,13 @@ import { ComponentModule } from '../component/component.module';
     MisProyectosComponent,
   ],
   imports: [
+    FormsModule,
     CommonModule,
     ShareModule,
     RouterModule,
+    BrowserModule,
     ComponentModule,
-    CommonModule,
-    RouterModule
+    CommonModule
   ],
 })
 export class PagesModule { }

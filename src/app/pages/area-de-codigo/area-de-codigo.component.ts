@@ -5,11 +5,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './area-de-codigo.component.html',
   styleUrls: ['./area-de-codigo.component.css']
 })
-export class AreaDeCodigoComponent implements OnInit {
+export class AreaDeCodigoComponent  {
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
+  htmlContent: string = '';
+  cssContent: string = '';
+  jsContent: string = '';
+  iframeSrc: string = 'data:text/html;base64,PGgxPkhvbGEgbXVuZG88L2gxPg==';
+
+  extractAndSend() {
+    console.log('Contenido HTML:', this.htmlContent);
+    console.log('Contenido CSS:', this.cssContent);
+    console.log('Contenido JS:', this.jsContent);
+
+    // Aquí puedes realizar una llamada a tu backend para enviar los contenidos
+    // utilizando HttpClient u otras técnicas de comunicación en Angular.
   }
-
 
 }

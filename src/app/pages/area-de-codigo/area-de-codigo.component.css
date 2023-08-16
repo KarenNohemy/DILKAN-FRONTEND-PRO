@@ -54,3 +54,19 @@ textarea {
 }
 
 
+.btn-option  {
+  background:  #26e41c 50%;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  float: right; /* Coloca el botón a la izquierda */
+  margin-right: 10px; /* Agrega un margen derecho para separación */
+  margin-bottom: 5%;
+  margin-left: 3%;
+}
+
+#run:hover {
+  background-color: #0db205; /* Cambia el color al posicionarse sobre el botón */
+}

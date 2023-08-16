@@ -83,25 +83,4 @@
 .agregar-colaborador button:hover {
   background-color: #5b4cbf;
 }
-/*planes*/
-.planes {
-  height: 35px;
-  width: 83%;
-  border-radius: 10px;
-  background-color: #d9d9d9;
-  margin-bottom: 12%;
-  margin-top: 10%;
-  }
-  .planes:valid {
-    border-color: #d9d9d9;
-    border: 3px solid #7e8ad2; }
-  .planes:focus {
-    outline: none;
-    border-color: #695CCA; }
-  .planes option {
-    text-align: left;
-    vertical-align: middle;
-    font-weight: 500;
-    line-height: 70%;
-    color: #474a52;
-  }
+

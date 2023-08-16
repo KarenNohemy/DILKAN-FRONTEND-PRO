@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
   <script>
@@ -7,42 +6,46 @@
       iframe.contentDocument.documentElement.innerHTML = code;
     }
   </script>
+    <meta charset="UTF-8">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+      <!--FONT AWESON-->
+      <script src="https://kit.fontawesome.com/37598b2d44.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
   <app-btn-option></app-btn-option>
-  <div class="container">
-    <div class="circle" id="html">
-      <img src="assets/IMG/ic-html.png">
-    </div>
+  <button (click)="extractAndSend()" class="btn-option fas fa-play " id="run" ></button>
 
-    <textarea id="htmlArea" class="text-area" width="400" height="300" srcdoc=""></textarea>
-    <div class="circle" id="css">
-      <img src="assets/IMG/ic-css.png">
-    </div>
+<!-- app.component.html -->
+<div class="container">
 
-    <textarea id="cssArea" class="text-area"  width="400" height="300" srcdoc=""></textarea>
-    <div class="circle" id="js">
-      <img src="assets/IMG/ic-js.png">
-    </div>
+  <div class="circle" id="html">
+    <img src="assets/IMG/ic-html.png">
+  </div>
 
-    <textarea id="jsArea" class="text-area"  width="400" height="300" srcdoc=""></textarea>
-    <div class="circle" id="js">
-      <img src="assets/IMG/ic-js.png">
-    </div>
+  <textarea id="htmlArea" class="text-area" [(ngModel)]="htmlContent" width="400" height="300" srcdoc=""></textarea>
 
-    <iframe src="data:text/html;base64,PGgxPkhvbGEgbXVuZG88L2gxPg==" id="pantalla"  width="550" height="300" class="iframe-area"></iframe>
-    <div class="circle" id="js">
-      <img src="assets/IMG/ic-js.png">
-    </div>
+  <div class="circle" id="css">
+    <img src="assets/IMG/ic-css.png">
+  </div>
 
-    </div>
+  <textarea id="cssArea" class="text-area" [(ngModel)]="cssContent" width="400" height="300" srcdoc=""></textarea>
+
+  <div class="circle" id="js">
+    <img src="assets/IMG/ic-js.png">
+  </div>
+
+  <textarea id="jsArea" class="text-area" [(ngModel)]="jsContent" width="400" height="300" srcdoc=""></textarea>
+
+  <iframe [src]="iframeSrc" id="pantalla"  width="550" height="300" class="iframe-area"></iframe>
+
+  <div class="circle" id="js">
+    <img src="assets/IMG/ic-js.png">
+  </div>
+</div>
+
 
 
 </body>
-
-</html>
-
-
-
