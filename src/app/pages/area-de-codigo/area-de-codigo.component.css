@@ -15,43 +15,46 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
-
-/*IMAGENES*/
-.circle img {
-  width: 100px; /* Ajusta el tamaño según tus necesidades */
-}
-
-/*
-
-textarea {
-  position: relative; //Asegura que el textarea tenga posición relativa
-  width: 100%;
+.iframe-area {
+  flex: 1 0 45%;
+  width: 400px;
   height: 300px;
   padding: 10px;
-  font-size: 16px;
+  border: 2px solid rgb(3, 1, 1);
+  border-radius: 4px;
+  margin-top: 3%;
 }
-*/
 
-#html, #css, #js {
+/*IMAGENES*/
+.tab-container {
+  position: relative;
+  display: flex;
+  left: 1%;
+
+}
+
+.tab-icon {
   position: absolute;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  background: #474A57ff; /* Color de fondo para simular la pestaña */
+  padding: 5px; /* Espaciado dentro de la pestaña */
+  border-radius: 5px 5px 0 0; /* Esquinas redondeadas en la parte superior */
 }
 
-#html {
-  top: 17%;
-  left: 6%;
+.tab-icon img {
+  width: 24px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 24px;
 }
 
-#css {
-  top: 17%;
-  left: 55%;
+.text-area {
+  margin-top: 30px; /* Espaciado para separar la pestaña del textarea */
+  padding: 10px; /* Espaciado dentro del textarea */
+  border: 1px solid #ccc; /* Bordes del textarea */
+  border-radius: 0 0 5px 5px; /* Esquinas redondeadas en la parte inferior */
 }
 
-#js {
-  top: 61%;
-  left: 7%;
-}
+/*BOTON RUN*/
 
 
 .btn-option  {
@@ -70,3 +73,6 @@ textarea {
 #run:hover {
   background-color: #0db205; /* Cambia el color al posicionarse sobre el botón */
 }
+
+
+
