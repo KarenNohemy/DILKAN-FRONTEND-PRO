@@ -20,13 +20,14 @@ import { HttpClientModule } from '@angular/common/http';
         AppComponent,
         NopagefoundComponent,
         PagesComponent,
+        
     ],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FormsModule,
-        PagesModule,
+        
         ShareModule,
         AuthModule,
         RouterModule,

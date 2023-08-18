@@ -22,7 +22,7 @@
 
      <!-- <button (click)="agregarColaborador()">Ver colaboradores</button> -->
       <select class="agregar-colaborador" aria-placeholder="Ver Colaboradores">
-              <option value="name">Dilan Alamendares </option>
+              <option value="name">Dilan Almendarez </option>
               <option value="name">Karen Lopez </option>
       </select>
   </div>
@@ -50,20 +50,23 @@
       <img src="assets/IMG/ic-html.png">
     </div>
   </div>
-  <textarea id="htmlArea" class="text-area" [(ngModel)]="htmlContent" (input)="updateIframe('htmlArea', htmlContent)"></textarea>
-
+  <!--<textarea id="htmlArea" class="text-area" [(ngModel)]="htmlContent" (input)="updateIframe('htmlArea', htmlContent)"></textarea> -->
+  
+  <textarea id="htmlArea" class="text-area"  [(ngModel)]="htmlContent" (ngModelChange)="onHtmlChange($event)"></textarea>
+  
   <div class="tab-container">
     <div class="tab-icon">
       <img src="assets/IMG/ic-css.png">
     </div>
   </div>
-  <textarea id="cssArea" class="text-area" [(ngModel)]="cssContent" (input)="updateIframe('cssArea', cssContent)"></textarea>
-
+  <!--<textarea id="cssArea" class="text-area" [(ngModel)]="cssContent" (input)="updateIframe('cssArea', cssContent)"></textarea>-->
+  <textarea id="cssArea" class="text-area" [(ngModel)]="cssContent" (ngModelChange)="onCssChange($event)"></textarea>
   <div class="tab-container">
     <div class="tab-icon">
       <img src="assets/IMG/ic-js.png">
     </div>
   </div>
+  <!--<textarea id="jsArea" class="text-area" [(ngModel)]="jsContent" (input)="updateIframe('jsArea', jsContent)"></textarea>-->
   <textarea id="jsArea" class="text-area" [(ngModel)]="jsContent" (input)="updateIframe('jsArea', jsContent)"></textarea>
 
   <div class="tab-container">

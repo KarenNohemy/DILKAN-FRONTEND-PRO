@@ -1,17 +1,48 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import hljs from 'highlight.js';
+import { } from 'ngx-highlightjs';
 
 @Component({
   selector: 'app-area-de-codigo',
   templateUrl: './area-de-codigo.component.html',
   styleUrls: ['./area-de-codigo.component.css']
 })
-export class AreaDeCodigoComponent  {
+export class AreaDeCodigoComponent  implements AfterViewInit{
+  
+  constructor() { }
 
+  ngAfterViewInit(): void {
+    this.highlightTextarea('htmlArea');
+    
+    
+  }
+  highlightTextarea(textareaId: string) {
+    const textarea = document.getElementById(textareaId) as HTMLTextAreaElement;
+    if (textarea) {
+      hljs.highlightBlock(textarea);
+    }
+  }
+  onHtmlChange(content: string) {
+    this.updateIframe('htmlArea', content);
+    this.highlightTextarea('htmlArea');
+  }
+  
+  onCssChange(content: string) {
+    this.updateIframe('cssArea', content);
+    this.highlightTextareaCss('cssArea'); // Aplica el resaltado al cambiar el contenido
+  }
+  highlightTextareaCss(textareaId: string) {
+    const textarea = document.getElementById(textareaId) as HTMLTextAreaElement;
+    if (textarea) {
+      hljs.highlightBlock(textarea);
+    }
+  }
 
   htmlContent: string = '';
   cssContent: string = '';
   jsContent: string = '';
   iframeSrc: string = 'data:text/html;base64,PGgxPkhvbGEgbXVuZG88L2gxPg==';
+
 
   extractAndSend() {
     console.log('Contenido HTML:', this.htmlContent);

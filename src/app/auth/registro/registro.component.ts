@@ -19,7 +19,7 @@ export class RegistroComponent {
   ) {
     this.registerForm = this.fb.group({
       nombreUsuario: ['Dilan Almendarez', [Validators.required, Validators.minLength(15)]],
-      correoElectronico: ['andino.dilan@gmail.com', [Validators.required, Validators.minLength(15), Validators.email]],
+      correoElectronico: ['prueba22@gmail.com', [Validators.required, Validators.minLength(15), Validators.email]],
       contrasena: ['dilkan2023.', [Validators.required, Validators.minLength(8)]],
       fotoPerfil: ['perfil2.png'],
       plan: this.fb.group({
