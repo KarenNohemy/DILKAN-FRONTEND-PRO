@@ -15,8 +15,32 @@
 </head>
 
 <body>
-  <app-btn-option></app-btn-option>
-  <button (click)="extractAndSend()" class="btn-option fas fa-play " id="run" ></button>
+  
+  <div class="agregar-colaborador">
+    <input type="text" placeholder="Nombre del colaborador" >  <!-- [(ngModel)]="nuevoColaborador"-->
+    <button (click)="agregarColaborador()"> <i class="fas fa-plus"></i> </button>
+
+     <!-- <button (click)="agregarColaborador()">Ver colaboradores</button> -->
+      <select class="agregar-colaborador" aria-placeholder="Ver Colaboradores">
+              <option value="name">Dilan Alamendares </option>
+              <option value="name">Karen Lopez </option>
+      </select>
+  </div>
+
+  <div class="btn-option">
+    <button (click)="onUndo()" id="do">
+      <i class="fas fa-undo"></i>
+    </button>
+    <button (click)="onRedo()" id="undo">
+      <i class="fas fa-redo"></i>
+    </button>
+    <button  (click)="extractAndSend()" id="save">
+      <i class="fas fa-save"></i>
+    </button>
+    <button (click)="onClose()" id="close" routerLink="/mis-proyectos">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
 
 <!-- app.component.html -->
 <div class="container">
@@ -42,6 +66,11 @@
   </div>
   <textarea id="jsArea" class="text-area" [(ngModel)]="jsContent" (input)="updateIframe('jsArea', jsContent)"></textarea>
 
+  <div class="tab-container">
+    <div class="tab-icon">
+      <img src="assets/IMG/chrome.png">
+    </div>
+  </div>
   <iframe [src]="iframeSrc" id="pantalla" width="550" height="300" class="iframe-area"></iframe>
 
 </div>

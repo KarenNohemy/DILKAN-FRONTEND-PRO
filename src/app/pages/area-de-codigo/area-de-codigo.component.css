@@ -4,12 +4,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-top: 2%;
 }
 
 .text-area {
-  flex: 1 0 45%;
+  flex: 1 0 46%;
   background-color: #474A57ff;
-  width: 400px;
+  width: 600px;
   height: 300px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -34,6 +35,8 @@
 }
 
 .tab-icon {
+  
+  flex: 1 0 44%;
   position: absolute;
   top: 0;
   left: 0;
@@ -54,25 +57,93 @@
   border-radius: 0 0 5px 5px; /* Esquinas redondeadas en la parte inferior */
 }
 
-/*BOTON RUN*/
+/*BOTONES GUARDA, CERRAR, REHACER, VOLVER*/
 
+/* Alineación de los botones en la esquina superior derecha */
+.btn-option {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
 
-.btn-option  {
-  background:  #26e41c 50%;
+/* Estilos para los botones de la esquina superior derecha */
+.btn-option button {
+  background:  #FDCD00 50%;
   border: none;
   border-radius: 5px;
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 5px;
-  float: right; /* Coloca el botón a la izquierda */
-  margin-right: 10px; /* Agrega un margen derecho para separación */
-  margin-bottom: 5%;
-  margin-left: 3%;
 }
-
 #run:hover {
   background-color: #0db205; /* Cambia el color al posicionarse sobre el botón */
 }
 
+
+#save:hover {
+  background-color: #3fd637; /* Cambia el color al posicionarse sobre el botón */
+}
+
+#close:hover {
+  background-color: #E44D26;
+}
+
+#do:hover{
+  background-color: #379AD6;
+}
+
+#undo:hover{
+  background-color: #379AD6;
+}
+
+
+/* Estilos para el campo de texto y los botones de agregar colaborador */
+.agregar-colaborador input {
+  height: 30px;
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 2%;
+}
+
+.agregar-colaborador button {
+  height: 30px;
+  padding: 5px 10px;
+  background-color: #695CCA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 2%;
+
+}
+
+.agregar-colaborador select {
+  height: 30px;
+  padding: 5px 10px;
+  background-color: #695CCA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 2%;
+
+}
+
+.agregar-colaborador select option {
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 500;
+  line-height: 70%;
+  color: #474a52;
+  background-color: #ccc;
+}
+
+.agregar-colaborador button:hover {
+  background-color: #5b4cbf;
+}
 
 
