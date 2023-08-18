@@ -67,7 +67,7 @@
     </div>
   </div>
   <!--<textarea id="jsArea" class="text-area" [(ngModel)]="jsContent" (input)="updateIframe('jsArea', jsContent)"></textarea>-->
-  <textarea id="jsArea" class="text-area" [(ngModel)]="jsContent" (input)="updateIframe('jsArea', jsContent)"></textarea>
+  <textarea id="jsArea" class="text-area" [(ngModel)]="jsContent"  (ngModelChange)="onJsChange($event)" ></textarea>
 
   <div class="tab-container">
     <div class="tab-icon">

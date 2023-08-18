@@ -29,14 +29,14 @@ export class AreaDeCodigoComponent  implements AfterViewInit{
   
   onCssChange(content: string) {
     this.updateIframe('cssArea', content);
-    this.highlightTextareaCss('cssArea'); // Aplica el resaltado al cambiar el contenido
+    this.highlightTextarea('cssArea'); // Aplica el resaltado al cambiar el contenido
   }
-  highlightTextareaCss(textareaId: string) {
-    const textarea = document.getElementById(textareaId) as HTMLTextAreaElement;
-    if (textarea) {
-      hljs.highlightBlock(textarea);
-    }
+
+  onJsChange(content: string) {
+    this.updateIframe('JsArea', content);
+    this.highlightTextarea('JsArea'); // Aplica el resaltado al cambiar el contenido
   }
+  
 
   htmlContent: string = '';
   cssContent: string = '';
