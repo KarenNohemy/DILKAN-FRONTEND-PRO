@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { UsuarioService } from 'src/app/services/usuario.service';
+
+import { AuthService } from 'src/app/services/auth.services';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +16,7 @@ export class RegistroComponent {
 
   constructor(
     private fb: FormBuilder,
-    private usuarioService: UsuarioService,
+    private authService: AuthService,
     private router: Router
   ) {
     this.registerForm = this.fb.group({
@@ -36,7 +38,7 @@ export class RegistroComponent {
       console.log(this.registerForm.value);
 
       // Llamar al servicio para registrar al usuario
-      this.usuarioService.registrarUsuario(this.registerForm.value)
+      this.authService.registrarUsuario(this.registerForm.value)
         .subscribe(
           (response) => {
             // Manejar la respuesta del servidor si es necesario

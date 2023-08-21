@@ -23,7 +23,9 @@ export class AuthService {
   }
 
 
-
+  getCorreoUsuario(){
+    return 'correo@example.com'; 
+  }
     //Metodo Para autentificar al usuario con Facebook
 
 
