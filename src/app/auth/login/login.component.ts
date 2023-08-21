@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import { AuthService } from 'src/app/services/auth.services';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,8 @@ export class LoginComponent {
 
   constructor(
     private router: Router, // Agrega la palabra clave private para inyectar el servicio Router
-    private usuarioService: UsuarioService
+    private usuarioService: UsuarioService,
+    private authService: AuthService
   ) {}
 
   // Método para iniciar sesión
@@ -26,13 +28,12 @@ export class LoginComponent {
     }
 
     // Llamar al método del servicio para iniciar sesión
-    this.usuarioService.login(this.correoElectronico, this.contrasena).subscribe(
+    this.authService.login(this.correoElectronico, this.contrasena).subscribe(
       (response) => {
         // Manejar la respuesta del servidor si es necesario
         console.log('Respuesta del servidor:', response);
         // Guardar el token en el local storage
         localStorage.setItem('token', response.token);
-
         // Redirigir al usuario a la página de inicio
         this.router.navigate(['/mis-proyectos']);
       },
