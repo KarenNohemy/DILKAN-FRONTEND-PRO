@@ -8,16 +8,19 @@ import { Router } from '@angular/router';
 })
 export class VentanaComponent {
   isOpen: boolean = true;
+
   constructor(private router: Router) { }
 
   openModal() {
     this.isOpen = true;
     this.router.navigate(['/mi-perfil']);
+    return this.isOpen;
     /*IMPLEMENTAR LÓGICA PARA GUARDAR DATOS */
   }
   closeModal() {
     this.isOpen = false;
     this.router.navigate(['/mi-perfil']);
+    return this.isOpen;
     /*IMPLEMENTAR LÓGICA PARA GUARDAR DATOS */
   }
 

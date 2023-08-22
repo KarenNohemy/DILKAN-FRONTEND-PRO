@@ -29,9 +29,9 @@
 
       <form class="formulario">
         <h3  class="text-label">Nombre de usuario:</h3>
-        <input type="text" class="input" placeholder="Karen Nohemy Lopez Cerrato" >
+        <input  [(ngModel)]="nombreUsuario" name="nombreUsuario" type="text" class="input" placeholder="Karen Cerrato" >
         <h3  class="text-label">Correo eletrónico:</h3>
-        <input type="email" class="input" placeholder="karen.lopez@gmail.com">
+        <input  [(ngModel)]="correoElectronico" name="correoElectronico" class="input" placeholder="karen.lopez@gmail.com">
 
 
 
@@ -43,25 +43,25 @@
             </div>
 
             <div class="btn-txt">
-              <input type="file" id="upload" accept="image/*" style="display: none;">
+              <input   id="upload" accept="image/*" style="display: none;">
 
-              <button class="button2">
+              <button class="button2" >
                 <label for="upload" class="input">Cambiar foto</label>
               </button>
             </div>
 
-            <button class="button-g" routerLink="/ventana">Guardar cambios</button></div>
+            <button class="button-g" (click)="guardarActualizacion()">Guardar cambios</button>
+          </div>
           <div class="right">
             <div class="pyp">
               <h3 class="text-label">Plan: </h3>
-              <input type="text" class="input" placeholder="Avanzado">
-              <h3 class="text-label">Proyectos: </h3>
-              <input type="text" class="input" placeholder="3">
+              <input  [(ngModel)]="plan" name="plan" class="input" placeholder="Avanzado">
+              <h3 class="text-label">Contraseña: </h3>
+              <input  [(ngModel)]="contrasena" name="contrasena" type="password" class="input" placeholder="Nueva contraseña">
             </div>
-            <button class="button-e" routerLink="/ventana">Eliminar cuenta</button>
+            <button class="button-e" (click)="eliminarPerfil()">Eliminar cuenta</button>
           </div>
         </section>
-
       </form>
     </div> <!-- END: .modal__content -->
   </div> <!-- END: .modal__container -->

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioService } from 'src/app/services/usuario.service';
+import { proyectoService } from 'src/app/services/proyecto.services';
 
 @Component({
   selector: 'app-mis-proyectos',
@@ -9,10 +9,10 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 export class MisProyectosComponent implements OnInit {
   proyectos: any[] = []; 
 
-  constructor(private usuarioService: UsuarioService) {}
+  constructor(private proyectoService: proyectoService) {}
 
   ngOnInit() {
-    this.usuarioService.getProyectosUsuario('nombreUsuario').subscribe(
+    this.proyectoService.getProyectosUsuario('Prueba2').subscribe(
       (response) => {
         this.proyectos = response.proyectos;
       },
@@ -21,4 +21,5 @@ export class MisProyectosComponent implements OnInit {
       }
     );
   }
+  
 }

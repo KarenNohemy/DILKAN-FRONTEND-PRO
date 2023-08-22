@@ -11,7 +11,7 @@ import { AreaDeCodigoComponent } from './area-de-codigo/area-de-codigo.component
 import { MisProyectosComponent } from './mis-proyectos/mis-proyectos.component';
 import { ShareModule } from '../share/share.module';
 import { ComponentModule } from '../component/component.module';
-
+import { VentanaComponent } from './ventana/ventana.component';
 
 
 @NgModule({
@@ -20,12 +20,14 @@ import { ComponentModule } from '../component/component.module';
     CrearProyectoComponent,
     AreaDeCodigoComponent,
     MisProyectosComponent,
+    VentanaComponent
   ],
   exports: [
     MiPerfilComponent,
     CrearProyectoComponent,
     AreaDeCodigoComponent,
     MisProyectosComponent,
+    VentanaComponent
   ],
   imports: [
     FormsModule,
@@ -34,7 +36,7 @@ import { ComponentModule } from '../component/component.module';
     RouterModule,
     BrowserModule,
     ComponentModule,
-    CommonModule
+    CommonModule, 
   ],
 })
 export class PagesModule { }
