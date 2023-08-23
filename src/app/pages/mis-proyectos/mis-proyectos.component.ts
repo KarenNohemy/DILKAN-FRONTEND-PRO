@@ -7,19 +7,23 @@ import { proyectoService } from 'src/app/services/proyecto.services';
   styleUrls: ['./mis-proyectos.component.css']
 })
 export class MisProyectosComponent implements OnInit {
-  proyectos: any[] = []; 
+  proyectos: any;
+  
 
   constructor(private proyectoService: proyectoService) {}
 
   ngOnInit() {
-    this.proyectoService.getProyectosUsuario('Prueba2').subscribe(
-      (response) => {
-        this.proyectos = response.proyectos;
-      },
-      (error) => {
-        console.error('Error al obtener proyectos:', error);
-      }
-    );
+    this.cargarProyectos();
+  }
+
+  cargarProyectos() {
+    this.proyectoService.getProyectosUsuario("Karen Nohemy")
+      .subscribe( (proyectos: any) => {
+        this.proyectos = proyectos;
+        console.log(this.proyectos);
+      });
+
+    } ;
+
   }
   
-}
