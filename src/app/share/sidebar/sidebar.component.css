@@ -98,3 +98,19 @@ label:hover{
 #check:checked ~ .side_bar{
   left: 0;
 }
+
+
+/* Media query para pantallas de 768px y menos */
+@media (max-width: 768px) {
+  .side_bar {
+    width: 200px; /* Cambia el ancho para ajustar a pantallas más pequeñas */
+    padding: 8px; /* Ajusta el padding si es necesario */
+  }
+
+  .side_bar .title {
+    justify-content: center;
+  }
+
+  /* Resto de los estilos para pantallas pequeñas */
+  /* ... */
+}

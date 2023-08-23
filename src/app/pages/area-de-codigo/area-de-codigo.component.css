@@ -1,29 +1,25 @@
 
 .container {
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   margin-top: 2%;
 }
 
 .text-area {
   flex: 1 0 46%;
-  background-color: #474A57ff;
-  width: 600px;
+  background-color: rgb(90, 91, 95);
+  width: 230%;
   height: 300px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 .iframe-area {
-  flex: 1 0 45%;
-  width: 400px;
+  flex: 1 0 44%;
+  width: 135%;
   height: 300px;
   padding: 10px;
   border: 2px solid rgb(3, 1, 1);
   border-radius: 4px;
-  margin-top: 3%;
+  margin-top: 10%;
 }
 
 /*IMAGENES*/

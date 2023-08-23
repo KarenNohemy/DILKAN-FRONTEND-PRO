@@ -135,7 +135,7 @@ margin-left: 20px;
   }
 
   .half {
-    flex: 100%;
+    flex: 50%;
   }
   .content {
     margin-left: 0%; /* Eliminamos el margen izquierdo en dispositivos pequeños */
@@ -234,6 +234,7 @@ margin-left: 20px;
   letter-spacing: 1px;
   grid-column: 1 / -1;
 }
+
 .planes{
   display: flex;
   justify-content: center;
@@ -252,6 +253,7 @@ margin-left: 20px;
   padding: 20px;
 }
 
+
 @media screen and (max-width: 767px) {
   .planes {
     flex-direction: column; /* Cambiamos la dirección del flex container en dispositivos pequeños */
@@ -261,10 +263,10 @@ margin-left: 20px;
   .plan {
     margin: 10px;
     width: 100%; /* Establecemos el ancho al 100% para que ocupe toda la pantalla en dispositivos pequeños */
-    width: 60px;
-
+    max-width: 200px; /* Ajustamos el ancho máximo para que no ocupe todo el ancho en pantallas muy pequeñas */
   }
 }
+
 
 .content-plan .price {
   color: #F4F5F7;
