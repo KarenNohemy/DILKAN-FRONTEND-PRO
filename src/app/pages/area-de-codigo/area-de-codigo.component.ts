@@ -1,15 +1,30 @@
 import { AfterViewInit, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import hljs from 'highlight.js';
 import { } from 'ngx-highlightjs';
-
+import { proyectoService } from 'src/app/services/proyecto.services';
 @Component({
   selector: 'app-area-de-codigo',
   templateUrl: './area-de-codigo.component.html',
   styleUrls: ['./area-de-codigo.component.css']
 })
-export class AreaDeCodigoComponent  implements AfterViewInit{
+export class AreaDeCodigoComponent  implements AfterViewInit, OnInit{
   
-  constructor() { }
+  constructor( private proyectoService: proyectoService) { }
+  ngOnInit(): void {
+    this.cargarProyecto();
+  }
+
+  cargarProyecto() {
+    this.proyectoService.getProyectosId(this._id)
+      .subscribe( (proyecto: any) => {
+        this.updateIframe('htmlArea', proyecto.codigoHtml);
+        this.updateIframe('cssArea', proyecto.codigoCss);
+        this.updateIframe('jsArea', proyecto.codigoJs);
+        
+      });
+
+    }
+  
 
   ngAfterViewInit(): void {
     this.highlightTextarea('htmlArea');
@@ -37,17 +52,18 @@ export class AreaDeCodigoComponent  implements AfterViewInit{
     this.highlightTextarea('JsArea'); // Aplica el resaltado al cambiar el contenido
   }
   
-
+  _id: string =  localStorage.getItem('proyectoId') || '';
   htmlContent: string = '';
   cssContent: string = '';
   jsContent: string = '';
   iframeSrc: string = 'data:text/html;base64,PGgxPkhvbGEgbXVuZG88L2gxPg==';
-
-
+  proyectoCargado: any = {};
+ 
   extractAndSend() {
     console.log('Contenido HTML:', this.htmlContent);
     console.log('Contenido CSS:', this.cssContent);
     console.log('Contenido JS:', this.jsContent);
+    console.log('ID:', this._id);
 
     // Aquí puedes realizar una llamada a tu backend para enviar los contenidos
     // utilizando HttpClient u otras técnicas de comunicación en Angular.

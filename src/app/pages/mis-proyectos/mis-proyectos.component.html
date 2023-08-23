@@ -15,11 +15,10 @@
 
   <div *ngFor="let proyecto of proyectos" class="proyecto-item">
     <div style="position: relative; display: inline-block;">
-      <i class="fas fa-solid fa-folder" style="color:#FDCD00; font-size: 100px; margin-right: -20px; left: -20px;"
-        routerLink="/area-de-codigo/{{ proyecto.id }}"></i>
+      <i class="fas fa-solid fa-folder" style="color:#FDCD00; font-size: 100px; margin-right: -20px; left: -20px;"></i>
       <i class="fas fa-solid fa-trash" style="color: #eb2907; position: absolute; bottom: 0; left: 0; font-size: 25px; margin-top: 10px;"></i>
     </div>
-    <p>{{ proyecto.nombre }}</p>
+    <p (click)="proyectoId(proyecto._id)">{{ proyecto.nombre }}</p>
     
   </div>
   

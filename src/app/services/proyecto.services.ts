@@ -23,8 +23,13 @@ export class proyectoService {
   }
 
   //Método para actualizar un proyecto
-  actualizarProyecto(id: string, proyectoDto:any):  Observable<any>{
+  actualizarProyecto(id: String, proyectoDto:any):  Observable<any>{
     return this.http.put<any>(`${this.apiUrl}/proyectos/actualizar/${id}`, proyectoDto);
+  }  
+
+  //actualizar2
+  updateProyecto2(proyecto: any):  Observable<any>{
+    return this.http.put<any>(`${this.apiUrl}/proyectos/actualizar/`, proyecto);
   }
 
   
