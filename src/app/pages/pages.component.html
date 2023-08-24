@@ -1,46 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/css/bootstrap.min.css">
 
 </head>
+
 <body>
-  <header>
-    <div id="user">
-      <img src="assets/IMG/Nohemy.jpeg"  class="profile-image" >
-      <span id="username">Karen Nohemy</span>
-    </div>
 
-    <!--TRAEL EL NAVBAR-->
-    <app-navbar></app-navbar>
-    <div >
-        <button class="btn-1"  routerLink="/landingpage" id="btnR">
-          Cerrar Seción
-        </button>
+  <header class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6"> <!-- En pantallas pequeñas, ocupa todo el ancho, en pantallas medianas ocupa la mitad del ancho -->
+        <div id="user" class="d-flex align-items-center">
+          <img src="assets/IMG/Nohemy.jpeg" class="profile-image" alt="Profile Image">
+          <span id="username" class="ms-2">Karen Nohemy</span>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 text-md-end mt-3 mt-md-0"> <!-- En pantallas pequeñas, ocupa todo el ancho, en pantallas medianas ocupa la mitad del ancho -->
+        <!--TRAEL EL NAVBAR-->
+        <app-navbar></app-navbar>
+        <div>
+          <button class="btn btn-primary btn-1" routerLink="/landingpage" id="btnR">Cerrar Sesión</button>
+        </div>
+      </div>
     </div>
-</header>
+  </header>
+  
   <main>
-    <app-sidebar></app-sidebar>
-    <div class="page-wraper">
-      <h1>MIS PROYECTOS</h1>
-      <div class="container-fluid">
-        <!--BREDCRUMBS-->
-
-        <!--MI SISTEMA DE RUTAS-->
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-body">
-
-                <router-outlet></router-outlet>
-              </div>
-            </div>
-          </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <app-sidebar></app-sidebar>
         </div>
         
+        <div class="page-wraper">
+          <h1>MIS PROYECTOS</h1>
+          <div class="container-fluid">
+            <!--BREDCRUMBS-->
+
+            <!--MI SISTEMA DE RUTAS-->
+            <div class="row">
+              <div class="col-md-12"> <!-- Utiliza col-md-12 para que ocupe todo el ancho en pantallas grandes -->
+                <div class="card">
+                  <div class="card-body">
+                    <router-outlet></router-outlet>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -48,4 +63,5 @@
     <app-footer></app-footer>
   </footer>
 </body>
+
 </html>

@@ -141,5 +141,69 @@
 .agregar-colaborador button:hover {
   background-color: #5b4cbf;
 }
+ /* BOTONES RESPONSIVE */
+@media (max-width: 1200px) {
+  /* Alineación de los botones abajo y en forma horizontal */
+  /* Estilos para el campo de texto y los botones de agregar colaborador */
+  .agregar-colaborador input,
+  .agregar-colaborador select {
+    width: 75%;
+    max-width: none;
+    margin: 12px;
+
+  }
+
+  .agregar-colaborador select {
+    width: 80%;
+  }
+
+  /* Alineación horizontal de los botones */
+  .btn-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 150px;
+  }
+
+  .btn-option button {
+    margin: 0 5px;
+  }
+
+}
+
+/* Estilo para pantallas mayores a 768px */
+
+@media (min-width: 961px) {
+  /* Estilo para pantallas de 961px o mas */
+  .row {
+    width: 600px; 
+  }
+}
+@media (max-width: 960px) {
+  /* Estilo para pantallas de 960px o menos */
+  .row {
+    width: 500px; 
+  }
+}
 
 
+@media (min-width: 700px) {
+  /* Estilo para pantallas de 700px o mas */
+  .row {
+    width: 440px; 
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Estilo para pantallas de 700px o mas */
+  .row {
+    width: 850px; 
+  }
+}
+@media (min-width: 1225px) {
+  /* Estilo para pantallas de 1225px o mas */
+  .row {
+    width: 900px;
+  }
+}

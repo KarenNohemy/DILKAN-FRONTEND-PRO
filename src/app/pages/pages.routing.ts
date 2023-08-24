@@ -21,7 +21,7 @@ const routes: Routes = [
       {path: 'area-de-codigo', component: AreaDeCodigoComponent},
       {path: 'mis-proyectos', component: MisProyectosComponent},
       //RUTA QUE SE ABRE CUANDO ESTA EL /
-      {path: '', redirectTo: '/mis-proyectos', pathMatch: 'full'},
+      {path: '', redirectTo: '/landingpage', pathMatch: 'full'},
     ]
   },
 

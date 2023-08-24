@@ -29,6 +29,21 @@ header {
   color: #ffffff;
 }
 
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .profile-image {
+    width: 35px;
+    height: 35px;
+    top: 0%;
+
+  }
+  #btnR {
+    top: -5%; /* Ajusta la posición del botón en pantallas pequeñas */
+  }
+
+}
+
+
 /*BOTONES*/
 #btnR{
   position: absolute;
@@ -36,10 +51,7 @@ header {
   left: 90%;
   transform: translate(-50%, -50%);
 }
-.content {
-  z-index: 1;
-  cursor: pointer;
-}
+
 .btn-1, .btn-2 {
   color: #27282c;
   padding: 10px;
@@ -60,8 +72,11 @@ main {
 
 .page-wraper {
   flex: 1;
-  padding: 20px;
+  padding: 20px;  
+  width: 100%; /* Hacer que el contenido ocupe todo el ancho */
+  max-width: 100%; /* Asegurarse de que el contenido no tenga un ancho máximo */
 }
+
 
 /*BREDCRUMS*/
 .row {

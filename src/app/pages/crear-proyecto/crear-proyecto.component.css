@@ -7,11 +7,6 @@
   position: absolute;
   width: 1px; }
 
-body {
-    font-family: 'Inter';
-    color: #1a1a1a;
-    background-color: #D9E8EF;
-    }
 
 /*SECCIÓN DE IMAGEN*/
 .modal {
@@ -118,7 +113,21 @@ input {
   color: #474a57;
 }
 
+/* Estilos para pantallas de 800px o menos */
+@media (max-width: 915px) {
+  .text-label {
+    font-size: large; /* Cambia el tamaño de fuente */
+    line-height: 120%; /* Ajusta el espaciado entre líneas */
+  }
+}
 
+/* Estilos para pantallas de 690px o menos */
+@media (max-width: 690px) {
+  .text-label {
+    font-size: medium; /* Cambia el tamaño de fuente */
+    line-height: 140%; /* Ajusta el espaciado entre líneas */
+  }
+}
 
 
   /*BOTON DE INICIAR*/
@@ -174,32 +183,7 @@ input {
   background-color: #5b4cbf;
 }
 
-
-
-
-/*Colab
-.colab {
-  height: 35px;
-  width: 100%;
-  border-radius: 10px;
-  background-color: #d9d9d9;
-  }
-  .colab:valid {
-    border-color: #d9d9d9;
-    border: 3px solid #7e8ad2; }
-  .colab:focus {
-    outline: none;
-    border-color: #695CCA; }
-  .colab option {
-    text-align: left;
-    vertical-align: middle;
-    font-family: Inter;
-    font-size:large;
-    font-weight: 500;
-    line-height: 70%;
-    color: #656872;
-  }*/
-
+  
 
 
 

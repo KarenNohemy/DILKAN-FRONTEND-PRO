@@ -132,9 +132,3 @@ export class AreaDeCodigoComponent  implements AfterViewInit, OnInit{
   }
 
 }
-
-
-
-
-
-

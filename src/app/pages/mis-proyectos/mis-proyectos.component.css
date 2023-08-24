@@ -1,4 +1,50 @@
-body{
-  background-color:#2EC5CE;
-  padding: 3%;
+body {
+  margin: 0;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2EC5CE;
 }
+
+/* Estilo para pantallas mayores a 768px */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 2%;
+  max-width: 1000px;
+}
+
+@media (min-width: 700px) {
+  /* Estilo para pantallas de 700px o mas */
+  .row {
+    width: 1000px; /* Cambia el ancho a 500px */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    padding: 0 15px; /* Agrega un espaciado lateral */
+  }
+}
+
+
+@media (max-width: 960px) {
+  /* Estilo para pantallas de 768px o menos */
+  .row {
+    width: 350px; /* Cambia el ancho a 500px */
+    max-width: 100%; /* Quita el límite máximo de ancho */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    padding: 0 15px; /* Agrega un espaciado lateral */
+  }
+}
+
+@media (min-width: 960px) {
+  /* Estilo para pantallas de 960px o mas */
+  .row {
+    width: 600px; /* Cambia el ancho a 500px */
+    max-width: 100%; /* Quita el límite máximo de ancho */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    padding: 0 15px; /* Agrega un espaciado lateral */
+  }
+}
+
+
+

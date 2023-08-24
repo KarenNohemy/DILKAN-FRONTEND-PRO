@@ -8,7 +8,7 @@
 
 .side_bar{
   position: relative;
-  width: 300px;
+  width: 250px;
   height: 130vh;
   background: linear-gradient(to bottom, #7368c4, #aa98dc, #ddcef8);
   padding: 12px;
@@ -103,14 +103,20 @@ label:hover{
 /* Media query para pantallas de 768px y menos */
 @media (max-width: 768px) {
   .side_bar {
-    width: 200px; /* Cambia el ancho para ajustar a pantallas más pequeñas */
+    width: 250px; /* Cambia el ancho para ajustar a pantallas más pequeñas */
     padding: 8px; /* Ajusta el padding si es necesario */
-  }
-
-  .side_bar .title {
-    justify-content: center;
+    height: 30%; /* Ajusta la altura que prefieras */
+    margin: 0 auto;
   }
 
   /* Resto de los estilos para pantallas pequeñas */
-  /* ... */
+
+}
+/* Media query para pantallas de 960px o menos */
+@media (max-width: 960px) {
+  .side_bar {
+    width: 225px; /* Cambia el ancho para ajustar a pantallas más pequeñas */
+    padding: 8px; /* Ajusta el padding si es necesario */
+    margin: 0 auto;
+  }
 }

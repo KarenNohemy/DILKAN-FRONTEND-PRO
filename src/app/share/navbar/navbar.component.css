@@ -18,6 +18,17 @@ header {
 
 .logo img {
   width: 50px;
-  height: 50px;
+  height: 50px; 
   margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 35px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+    height: 35px;
+  }
+
+  .logo h1 {
+    font-size: 18px; /* Ajusta el tamaño del texto en pantallas pequeñas */
+  }
 }
