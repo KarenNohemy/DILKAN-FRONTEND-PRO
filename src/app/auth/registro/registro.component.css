@@ -1,38 +1,25 @@
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-body {
-  font-family: 'Inter';
-  color: #1a1a1a;
-  background-color: #D9E8EF; }
-
-/*SECCIÓN DE IMAGEN*/
 .modal {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
   height: 100vh;
-  width: 100vw;
-  padding-top: 50px;
+  width: 200vw;
   z-index: 100;
-overflow-y: auto;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
 }
 
+/*SECCIÓN DE IMAGEN*/
+
 .modal__container {
-  display: -ms-flexbox;
   display: flex;
   max-width: 675px;
-  min-height: 400px;
+  min-height: 60px;
   margin-bottom: 125px;
   background-color: #ffffff;
   border-radius: 5px;
@@ -48,7 +35,6 @@ overflow-y: auto;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-
 .modal__circle {
   position: absolute;
   top: 0;
@@ -62,8 +48,6 @@ overflow-y: auto;
   background-size: cover;
   background-position: center;
 }
-
-
 .modal__logo {
   position: absolute;
   top: 25%;
@@ -72,6 +56,7 @@ overflow-y: auto;
   -ms-transform: translateX(calc(-50% - 10px));
       transform: translateX(calc(-50% - 10px));
 }
+
 /*CREAR CUENTA*/
 .text-inicio {
   -ms-flex: 3;
@@ -83,9 +68,6 @@ overflow-y: auto;
 }
 
 /*FORMULARIO*/
-.formulario{
-  padding: 2%;
-}
 
 /*INPUTS*/
 input {
@@ -102,28 +84,16 @@ input {
   input:focus {
     outline: none;
     border-color: #695CCA; }
-  input::placeholder{
-    text-align: left;
-    vertical-align: middle;
-    font-family: Inter;
-    font-size:large;
-    font-weight: 700;
-    line-height: 70%;
-    color: #656872;
-  }
-
 
 /*BOTON DE CREAR CUENTA*/
-.button {
+.btn-crearCuenta {
   color: #ffffff;
   background: linear-gradient(to bottom, #30a3ea, #379ad6, #bf72d2);
   padding: 12px 25px;
   margin-top: 10%;
   margin-bottom: 10px;
   font-size: 15px;
-
   font-family: Inter;
-
   font-weight: 550;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -133,87 +103,9 @@ input {
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
   transition: all .2s;
   border-radius: 0.5rem;}
-
   .button:hover, .button:active, .button:focus {
     -ms-transform: scale(1.1);
         transform: scale(1.1); }
-
-
-/*BOTON DE VOLVER*/
-.button--transparent {
-  background: transparent;
-  border: 0;
-  outline: 0; }
-
-.button--close {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  width: 30px;
-  height: 30px;
-  color: #ffffff;
-  border-radius: 50%;
-  transition: all .25s;
-  z-index: 10; }
-  .button--close svg {
-    width: 20px;
-    height: 20px; }
-    .button--close svg * {
-      fill: currentColor; }
-  .button--close:hover, .button--close:active, .button--close:focus {
-    color: #695CCA;
-    background-color: #ffffff;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1); }
-
-
-/*BTNS VER PLANES Y SUBIR FOTO*/
-.button2 {
-  display: flex;
-  float:right;
-  background-color: #d9d9d9;
-  padding: 0.5rem 1.4rem;
-  margin-top: 10%;
-  margin-bottom: 10px;
-
-
-  justify-content: flex-end;
-  text-align: left;
-  vertical-align: middle;
-  font-family: Inter;
-  font-size: 0.875rem;
-  font-weight: 700;
-  line-height: 70%;
-  color: #656872;
-  align-items: center;
-  border-radius: 0.5rem;
-  border: none;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px #695CCA;
-  cursor: pointer;
-  transition: .6s ease;
-}
-
-.p{
-  display: flex;
-  font-family: Inter;
-  font-size:larger;
-  font-weight: 700;
-  margin-top: 15%;
-
-  margin-left: -15%;
-  margin-right: 8%;
-
-  color: #656872;
-}
-
-.btn-txt{
-  display:inline-flex;
-}
 
 /*FACEBOOK*/
 .button-facebook {
@@ -240,11 +132,70 @@ input {
   border: none;
 }
 
+/*BOTON DE VOLVER*/
+.button--transparent {
+  background: transparent;
+  border: 0;
+  outline: 0; }
+.button--close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  border-radius: 50%;
+  transition: all .25s;
+  z-index: 10; }
+    .button--close svg * {
+      fill: currentColor; }
+  .button--close:hover, .button--close:active, .button--close:focus {
+    color: #695CCA;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1); }
+
+
+/*BTNS VER PLANES Y SUBIR FOTO*/
+.button2 {
+  display: flex;
+  float:right;
+  background-color: #d9d9d9;
+  padding: 0.5rem 1.4rem;
+  margin-top: 10%;
+  margin-bottom: 10px;
+  justify-content: flex-end;
+  text-align: left;
+  vertical-align: middle;
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 70%;
+  color: #656872;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px #695CCA;
+  cursor: pointer;
+  transition: .6s ease;
+}
+
+.p{
+  display: flex;
+  font-family: Inter;
+  font-size:larger;
+  font-weight: 700;
+  margin-top: 15%;
+  margin-left: -15%;
+  margin-right: 8%;
+  color: #656872;
+}
+.btn-txt{
+  display:inline-flex;
+}
 .button-facebook svg {
   height: 30px;
 }
-
-
 
 /*FOTO*/
 .circle {
@@ -261,137 +212,28 @@ input {
   max-width: 100%;
   max-height: 100%;
 }
-
-/*CSS DE CHAT GPT*/
-
-.section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.left {
-  flex: 1;
-  padding-right: 20px;
-}
-
-.right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-group {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.form-group label {
-  width: 100px;
-}
-
 .input {
   width: 200px;
   height: 30px;
 }
-
 .profile-image {
   width: 150px;
   height: 150px;
   object-fit: cover;
 }
 
-.button {
-  padding: 10px 20px;
-  background-color: #30a3ea;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #379ad6;
-}
-
-/*
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 MODAL DE PLANES
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /* registro.component.css */
-.modal {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  height: 100vh;
-  width: 100vw;
-  z-index: 100;
-overflow-y: auto;
-
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.5);
-display: flex;
-justify-content: center;
-align-items: center;
-
-border-radius: 10px;
-box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
-border: 2px solid #000;
-}
 
 .modal-contenido {
-  display: -ms-flexbox;
   display: flex;
-  max-width: 400px;
-  min-height: 200px;
-  margin-bottom: 0%;
   background-color: #DEEBF1;
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
-  border: 2px solid #000;
-}
-
-/*TITULO*/
-.h1 {
-  display: flex;
-  padding: 50px 40px;
-  text-align: center;
-  line-height: 100%;
-  color: #18191F
-}
-
-
-/*SECCIÓN*/
-.seccion {
-  display: flex;  
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 16%; /* Ajusta el margen inferior según tus necesidades */
-  padding: 0px;
-}
-
-.izquierda {
-  text-align: left;
-  width: 100%;
-  padding: 5%;
-}
-
-.derecha {
-  text-align: right;
-  width: 80%;
-  padding: 5%;
+  border: 2px solid #494646;
+  padding-inline: 3%;
 }
 
 /*TEXTO DE OPCIONES*/
@@ -401,64 +243,40 @@ border: 2px solid #000;
   line-height: 100%;
   color: #474a57;
   display: block;
-  font-size: 18px; /* Ajusta el tamaño de fuente según tus necesidades */
+  font-size: 18px; 
   font-weight: bold;
-  margin-bottom: 5px ; /* Ajusta el margen inferior según tus necesidades */
   scroll-padding-block: 0%;
-  margin-bottom: 10%;
+  margin-bottom: 1%;
   margin-left: 0%; 
-  margin-top: 5%;
+  margin-top: 15%;
 }
-
 /*INPUTS*/
-#input_plan {
-  height: 30px;
-  width: 50%;
-  border-radius: 10px;
-  background-color: #d9d9d9;
-  margin-bottom: 5%;
-  margin-top: 5%;
-  }
-
 /*planes*/
 .planes_plan {
-  height: 35px;
-  width: 55%;
+  margin-top: 3%;
+  width: 200px;
+  height: 30px;
   border-radius: 10px;
   background-color: #d9d9d9;
-  margin-bottom: 5%;
-  margin-top: 5%;
-  }
+}
   .planes_plan:valid {
     border-color: #d9d9d9;
     border: 3px solid #7e8ad2; }
-  .planes_plan:focus {
-    outline: none;
-    border-color: #695CCA; }
   .planes_plan option {
-    text-align: left;
-    vertical-align: middle;
-    font-weight: 500;
-    line-height: 70%;
     color: #474a52;
   }
-
-
 
 /* Ajustes para los botones */
 .button-A,
 .button-C {
   border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 16px;
+  padding: 6px 14px;
   gap: 10px;
   font-family: Inter;
   font-weight: bold;
   font-size: medium;
-  margin-top: 20px;
-  margin-left: 10%;
+  padding: 5%;
+  margin: 6%;
 }
 .button-C {
   background-color: #474A57;

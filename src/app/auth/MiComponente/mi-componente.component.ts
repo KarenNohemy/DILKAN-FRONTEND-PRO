@@ -7,6 +7,18 @@ import { PruebaComponent } from '../prueba/prueba.component';
   styleUrls: ['./mi-componente.component.css']
 })
 export class MiComponenteComponent {
+  selectedTab: string = 'tab1';
+  tab1Content: string = '';
+  tab2Content: string = '';
+  tab3Content: string = '';
+
+  tab1Color: string = 'lightblue';
+  tab2Color: string = 'lightgreen';
+  tab3Color: string = 'lightpink';
+
+  selectTab(tab: string): void {
+    this.selectedTab = tab;
+  }
   // Lógica de tu componente aquí.
   mostrarFormularioModal: boolean = false;
 
@@ -16,6 +28,8 @@ export class MiComponenteComponent {
 
   cerrarModal() {
     this.mostrarFormularioModal = false;
+
+    
   }
 }
 

@@ -14,12 +14,14 @@ import { PagesComponent } from './pages/pages.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NopagefoundComponent,
         PagesComponent,
+        PaginationComponent,
         
     ],
     bootstrap: [AppComponent],

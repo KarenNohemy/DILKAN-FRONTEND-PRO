@@ -17,3 +17,33 @@
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
+.nav-tabs {
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.tab-content .tab-pane {
+  display: none;
+  padding: 10px;
+}
+
+.tab-content .tab-pane.active {
+  display: block;
+}
+
+.iframe-area {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 300px;
+}
+
+/*CODIGO DEL AREA DE TRABAJO*/

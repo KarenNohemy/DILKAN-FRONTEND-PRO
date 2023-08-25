@@ -1,12 +1,30 @@
-<!-- registro.component.html -->
-<form>
-  <!-- Campos de registro aquí -->
-  <button (click)="mostrarModal()">Mostrar Formulario Modal</button>
-</form>
+<div class="container mt-5">
+  <div class="d-flex justify-content-center">
+    <div class="nav nav-tabs">
+      <a class="nav-link" [class.active]="selectedTab === 'tab1'" (click)="selectTab('tab1')">Tab 1</a>
+      <a class="nav-link" [class.active]="selectedTab === 'tab2'" (click)="selectTab('tab2')">Tab 2</a>
+      <a class="nav-link" [class.active]="selectedTab === 'tab3'" (click)="selectTab('tab3')">Tab 3</a>
+    </div>
+  </div>
 
-<div *ngIf="mostrarFormularioModal" class="modal">
-  <div class="modal-contenido">
-    <!-- Contenido del formulario modal aquí -->
-    <button (click)="cerrarModal()">Cerrar</button>
+  <div class="tab-content mt-3">
+    <div class="tab-pane" [class.active]="selectedTab === 'tab1'" [style.backgroundColor]="tab1Color">
+      <div class="d-flex">
+        <textarea class="form-control flex-grow-1 mr-3" [(ngModel)]="tab1Content"></textarea>
+        <iframe class="iframe-area" ></iframe>
+      </div>
+    </div>
+    <div class="tab-pane" [class.active]="selectedTab === 'tab2'" [style.backgroundColor]="tab2Color">
+      <div class="d-flex">
+        <textarea class="form-control flex-grow-1 mr-3" [(ngModel)]="tab2Content"></textarea>
+        <iframe class="iframe-area"></iframe>
+      </div>
+    </div>
+    <div class="tab-pane" [class.active]="selectedTab === 'tab3'" [style.backgroundColor]="tab3Color">
+      <div class="d-flex">
+        <textarea class="form-control flex-grow-1 mr-3" [(ngModel)]="tab3Content"></textarea>
+        <iframe class="iframe-area" ></iframe>
+      </div>
+    </div>
   </div>
 </div>
