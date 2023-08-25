@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 import hljs from 'highlight.js';
 import { } from 'ngx-highlightjs';
 import { proyectoService } from 'src/app/services/proyecto.services';
@@ -7,58 +9,38 @@ import { proyectoService } from 'src/app/services/proyecto.services';
   templateUrl: './area-de-codigo.component.html',
   styleUrls: ['./area-de-codigo.component.css']
 })
-export class AreaDeCodigoComponent  implements AfterViewInit, OnInit{
-  
-  constructor( private proyectoService: proyectoService) { }
+
+export class AreaDeCodigoComponent implements AfterViewInit, OnInit {
+
+  constructor(private proyectoService: proyectoService, private http: HttpClient) { }
   ngOnInit(): void {
     this.cargarProyecto();
   }
 
+
+//+++++++++++++++++++++++++++++++++++GUARDAR PROYECTO+++++++++++++++++++++++++++++++++
+
+  //Obtener el contenido de cada proyecto 
   cargarProyecto() {
     this.proyectoService.getProyectosId(this._id)
-      .subscribe( (proyecto: any) => {
+      .subscribe((proyecto: any) => {
         this.updateIframe('htmlArea', proyecto.codigoHtml);
         this.updateIframe('cssArea', proyecto.codigoCss);
         this.updateIframe('jsArea', proyecto.codigoJs);
-        
+
       });
-
-    }
-  
-
-  ngAfterViewInit(): void {
-    this.highlightTextarea('htmlArea');
-    
-    
-  }
-  highlightTextarea(textareaId: string) {
-    const textarea = document.getElementById(textareaId) as HTMLTextAreaElement;
-    if (textarea) {
-      hljs.highlightBlock(textarea);
-    }
-  }
-  onHtmlChange(content: string) {
-    this.updateIframe('htmlArea', content);
-    this.highlightTextarea('htmlArea');
-  }
-  
-  onCssChange(content: string) {
-    this.updateIframe('cssArea', content);
-    this.highlightTextarea('cssArea'); // Aplica el resaltado al cambiar el contenido
   }
 
-  onJsChange(content: string) {
-    this.updateIframe('JsArea', content);
-    this.highlightTextarea('JsArea'); // Aplica el resaltado al cambiar el contenido
-  }
-  
-  _id: string =  localStorage.getItem('proyectoId') || '';
+  //Guardar Id, y código de cada proyecto
+  _id: string = localStorage.getItem('proyectoId') || '';
   htmlContent: string = '';
   cssContent: string = '';
   jsContent: string = '';
   iframeSrc: string = 'data:text/html;base64,PGgxPkhvbGEgbXVuZG88L2gxPg==';
   proyectoCargado: any = {};
- 
+
+  //Botón de guardar contenido
+  //Ahora solo lo guarda y muesra en consola, debe guardarlo en el html,css y js del proyecto con el id del localStorage 
   extractAndSend() {
     console.log('Contenido HTML:', this.htmlContent);
     console.log('Contenido CSS:', this.cssContent);
@@ -67,11 +49,36 @@ export class AreaDeCodigoComponent  implements AfterViewInit, OnInit{
 
     // Aquí puedes realizar una llamada a tu backend para enviar los contenidos
     // utilizando HttpClient u otras técnicas de comunicación en Angular.
-  }
+    //URL del backend 
+    const apiUrlBack = 'http://localhost:4200';
 
-  // Propiedades para el contenido de los textareas y el iframe
+    const dataCodigo = {
+      _id: this._id, 
+      codigoHtml: this.htmlContent,
+      codigoCss: this.cssContent,
+      codigoJs: this.jsContent
+    };
 
+  
 
+    // Envía los datos al backend utilizando HttpClient
+
+    this.proyectoService.actualizarProyecto(this._id, dataCodigo).subscribe( 
+      (response) => {
+        if(this._id == dataCodigo._id){
+        //Me esta respondiendo con el proyecto pero sin guardar cambios
+          console.log('Código nuevo de los text-area' ,dataCodigo);
+          console.log('Respuesta del backend:', response);
+        }
+
+      },
+      (error) => {
+        console.error('Error al guardar los datos de los text-areas:', error);
+      }
+    );
+  
+}
+  //++++++++++++++++++++++++++++++++++NAVEGADOR++++++++++++++++++++++++++++++++++
   // Método para actualizar el contenido del iframe
   updateIframe(textareaId: string, content: string) {
     if (textareaId === 'htmlArea') {
@@ -99,8 +106,32 @@ export class AreaDeCodigoComponent  implements AfterViewInit, OnInit{
       iframeDocument.close();
     }
   }
+  //++++++++++++++++++++++++++++++++++ESTILOS HIGHLIGH++++++++++++++++++++++++++++++++++
+  ngAfterViewInit(): void {
+    this.highlightTextarea('htmlArea');
+  }
+  highlightTextarea(textareaId: string) {
+    const textarea = document.getElementById(textareaId) as HTMLTextAreaElement;
+    if (textarea) {
+      hljs.highlightBlock(textarea);
+    }
+  }
+  onHtmlChange(content: string) {
+    this.updateIframe('htmlArea', content);
+    this.highlightTextarea('htmlArea');
+  }
 
-  //++++++++++BOTONES++++++++++++++++++++++++++++++++++
+  onCssChange(content: string) {
+    this.updateIframe('cssArea', content);
+    this.highlightTextarea('cssArea'); // Aplica el resaltado al cambiar el contenido
+  }
+
+  onJsChange(content: string) {
+    this.updateIframe('JsArea', content);
+    this.highlightTextarea('JsArea'); // Aplica el resaltado al cambiar el contenido
+  }
+
+  //+++++++++++++++++++++++++++++++++++BOTONES++++++++++++++++++++++++++++++++++
   @Output() undoClicked = new EventEmitter<void>();
   @Output() redoClicked = new EventEmitter<void>();
   @Output() saveClicked = new EventEmitter<void>();
@@ -121,7 +152,7 @@ export class AreaDeCodigoComponent  implements AfterViewInit, OnInit{
   onClose() {
     this.closeClicked.emit();
   }
-
+  //+++++++++++++++++++++++++++++++++++AGREGAR COLABORADOR+++++++++++++++++++++++++++++++++
   nuevoColaborador: string = '';
 
   agregarColaborador() {

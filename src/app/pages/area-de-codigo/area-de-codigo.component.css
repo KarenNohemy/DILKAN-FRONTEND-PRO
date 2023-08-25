@@ -5,7 +5,7 @@
 
 .text-area {
   flex: 1 0 46%;
-  background-color: rgb(90, 91, 95);
+  background-color: rgb(146, 147, 150);
   width: 230%;
   max-width: 300%;
   height: 300px;
@@ -32,7 +32,6 @@
 }
 
 .tab-icon {
-  
   flex: 1 0 44%;
   position: absolute;
   top: 0;
@@ -48,7 +47,7 @@
 }
 
 .text-area {
-  margin-top: 30px; /* Espaciado para separar la pestaña del textarea */
+  margin-top: 30px; 
   padding: 10px; /* Espaciado dentro del textarea */
   border: 1px solid #ccc; /* Bordes del textarea */
   border-radius: 0 0 5px 5px; /* Esquinas redondeadas en la parte inferior */

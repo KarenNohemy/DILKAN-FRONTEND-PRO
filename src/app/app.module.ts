@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 /*HIGHTLINE */
 import { FormsModule } from '@angular/forms';
 
