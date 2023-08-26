@@ -13,10 +13,7 @@ export class CrearProyectoComponent {
 
   nombre!: string;
   colaboradores!: object | string;
-  codigoHtml!: object | string;
-  codigoCss!: object | string;
-  codigoJs!: object | string;
-  usuario!: object | string;
+  
 
 
   constructor(
@@ -30,43 +27,40 @@ export class CrearProyectoComponent {
   }
 
   crearProyecto() {
-    this.proyectoService.crearProyecto(
-      this.nombre,
-      this.colaboradores,
-      this.codigoHtml, 
-      this.codigoCss, 
-      this.codigoJs, 
-      this.usuario
-    ).subscribe(
+    const proyecto = {
+      nombre: this.nombre,
+      codigoHtml: {},  // Agrega aquí el contenido de código HTML
+      codigoCss: {},   // Agrega aquí el contenido de código CSS
+      codigoJs: {},    // Agrega aquí el contenido de código JavaScript
+      colaboradores: this.colaboradores,
+      usuario: 'Karen Nohemy' // Agrega aquí el nombre de usuario
+    };
+  
+    this.proyectoService.crearProyecto(proyecto).subscribe(
       (response) => {
-        console.log('Proyecto creado:', response.proyecto);
-        // Aquí se debe redirigir al area-de-codigo de ese proyecto|| /area-de-codigo/idProyecto
-        //this.router.navigate(['/area-de-codigo']);
+        // Aquí puedes manejar la respuesta del servicio si es necesario
+        console.log('Proyecto creado:', response);
+  
+        // Redirigir al usuario a la página de mis proyectos
+        this.router.navigate(['/mis-proyectos']);
       },
       (error) => {
         console.error('Error al crear el proyecto:', error);
-
       }
     );
 
   }
 
   obtenerColaboradores() {
-    /*
-    // Llama al método del servicio para obtener los colaboradores
-    this.proyectoService.getProyectoColaborador(
-      this.colaboradores
-    ).subscribe(
+    /*this.proyectoService.obtenerColaboradores().subscribe(
       (response) => {
-        this.colaboradores = response.colaborador; // Asigna el colaborador a la lista
-        
-        console.log(response)
+        // Aquí puedes manejar la respuesta del servicio
+        this.colaboradores = response;
       },
       (error) => {
         console.error('Error al obtener los colaboradores:', error);
       }
-    );
-    */
+    );*/
   }
   
 }

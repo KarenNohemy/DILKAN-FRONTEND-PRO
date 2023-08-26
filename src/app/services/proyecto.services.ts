@@ -10,11 +10,9 @@ export class proyectoService {
 
   constructor(private http: HttpClient) { }
 
-  crearProyecto(nombre: string, colaboradores: object | string, usuario: object | string,
-    codigoHtml: object | string, codigoCss: object | string, codigoJs: object | string,
-  ) {
-    return this.http.post<any>(`${this.apiUrl}/proyectos/crear`,
-      { nombre, colaboradores, usuario, codigoHtml, codigoCss, codigoJs });
+  crearProyecto(proyecto: any): Observable<any> {
+    const url = `${this.apiUrl}/proyectos/crear`; // Ajusta la URL según la ruta de tu backend
+    return this.http.post(url, proyecto);
   }
 
   //Método para eliminar un proyecto
