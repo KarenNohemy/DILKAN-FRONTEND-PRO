@@ -18,25 +18,44 @@ export class RegistroComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private usuarioService: UsuarioService, // Agrega el servicio de usuario
+
   ) {
     this.registerForm = this.fb.group({
       nombreUsuario: ['Dilan Almendarez', [Validators.required, Validators.minLength(15)]],
       correoElectronico: ['prueba22@gmail.com', [Validators.required, Validators.minLength(15), Validators.email]],
       contrasena: ['dilkan2023.', [Validators.required, Validators.minLength(8)]],
       fotoPerfil: ['perfil2.png'],
+      // Agregar el formulario de plan dentro del registro
       plan: this.fb.group({
+        tipoPlan: ['avanzado'],
         costoMensual: ['1.00'],
         fechaInicio: ['15/2/2021'],
         fechaFinal: ['25/3/2022']
-      }),
-      
+      })
     });
   }
 
+//Crera funcion para registrar, al darle click en CREAR 
+/**
+ * {
+    this.registerForm = this.fb.group({
+      nombreUsuario: ['Dilan Almendarez', [Validators.required, Validators.minLength(15)]],
+      correoElectronico: ['prueba22@gmail.com', [Validators.required, Validators.minLength(15), Validators.email]],
+      contrasena: ['dilkan2023.', [Validators.required, Validators.minLength(8)]],
+      fotoPerfil: ['perfil2.png'],
+      // Agregar el formulario de plan dentro del registro
+      plan: this.fb.group({
+        tipoPlan: ['avanzado'],
+        costoMensual: ['1.00'],
+        fechaInicio: ['15/2/2021'],
+        fechaFinal: ['25/3/2022']
+      })   
+ */
   crearUsuario() {
     if (this.registerForm.valid) {
-      console.log(this.registerForm.value);
+      console.log('Datos del formulario:', this.registerForm.value);
 
       // Llamar al servicio para registrar al usuario
       this.authService.registrarUsuario(this.registerForm.value)
@@ -57,6 +76,8 @@ export class RegistroComponent {
       console.log('El formulario no es válido');
     }
   }
+
+  agregarPlan(){}
 
   mostrarFormularioModal: boolean = false;
 

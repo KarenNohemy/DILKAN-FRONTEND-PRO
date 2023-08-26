@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>       
+  <head>
       <!--FONT AWESON-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-      
+
   </head>
-  
+
   <body>
     <div class="container">
       <div class="row">
-        
+
       <div class="modal__container">
         <div class="modal__featured">
           <!--BOTON PARA REGRESAR-->
@@ -23,37 +23,37 @@
               </g>
             </svg>
           </button>
-  
+
           <div class="modal__circle"></div>
           <img src="assets/IMG/Logo1.png" class="modal__logo" />
         </div>
-  
+
         <div class="text-inicio">
-  
+
           <form class="formulario">
             <h3 class="text-label">Nombre de usuario:</h3>
             <input [(ngModel)]="nombreUsuario" name="nombreUsuario" type="text" class="input" placeholder="Karen Cerrato">
             <h3 class="text-label">Correo eletrónico:</h3>
             <input [(ngModel)]="correoElectronico" name="correoElectronico" class="input"
               placeholder="karen.lopez@gmail.com">
-  
-  
-  
+
+
+
             <section class="section">
               <div class="left">
                 <!--Foto del usuario-->
                 <div class="circle" id="plan">
                   <img src="assets/IMG/fotoPerfil.png">
                 </div>
-  
+
                 <div class="btn-txt">
                   <input id="upload" accept="image/*" style="display: none;">
-  
+
                   <button class="button2">
                     <label for="upload" class="input">Cambiar foto</label>
                   </button>
                 </div>
-  
+
                 <button class="button-g" (click)="guardarActualizacion()">Guardar cambios</button>
               </div>
               <div class="right">

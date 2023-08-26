@@ -20,7 +20,7 @@ export class AreaDeCodigoComponent implements AfterViewInit, OnInit {
 
 //+++++++++++++++++++++++++++++++++++GUARDAR PROYECTO+++++++++++++++++++++++++++++++++
 
-  //Obtener el contenido de cada proyecto 
+  //Obtener el contenido de cada proyecto
   cargarProyecto() {
     this.proyectoService.getProyectosId(this._id)
       .subscribe((proyecto: any) => {
@@ -40,7 +40,7 @@ export class AreaDeCodigoComponent implements AfterViewInit, OnInit {
   proyectoCargado: any = {};
 
   //Botón de guardar contenido
-  //Ahora solo lo guarda y muesra en consola, debe guardarlo en el html,css y js del proyecto con el id del localStorage 
+  //Ahora solo lo guarda y muesra en consola, debe guardarlo en el html,css y js del proyecto con el id del localStorage
   extractAndSend() {
     console.log('Contenido HTML:', this.htmlContent);
     console.log('Contenido CSS:', this.cssContent);
@@ -49,21 +49,21 @@ export class AreaDeCodigoComponent implements AfterViewInit, OnInit {
 
     // Aquí puedes realizar una llamada a tu backend para enviar los contenidos
     // utilizando HttpClient u otras técnicas de comunicación en Angular.
-    //URL del backend 
+    //URL del backend
     const apiUrlBack = 'http://localhost:4200';
 
     const dataCodigo = {
-      _id: this._id, 
+      _id: this._id,
       codigoHtml: this.htmlContent,
       codigoCss: this.cssContent,
       codigoJs: this.jsContent
     };
 
-  
+
 
     // Envía los datos al backend utilizando HttpClient
 
-    this.proyectoService.actualizarProyecto(this._id, dataCodigo).subscribe( 
+    this.proyectoService.actualizarProyecto(this._id, dataCodigo).subscribe(
       (response) => {
         if(this._id == dataCodigo._id){
         //Me esta respondiendo con el proyecto pero sin guardar cambios
@@ -76,7 +76,7 @@ export class AreaDeCodigoComponent implements AfterViewInit, OnInit {
         console.error('Error al guardar los datos de los text-areas:', error);
       }
     );
-  
+
 }
   //++++++++++++++++++++++++++++++++++NAVEGADOR++++++++++++++++++++++++++++++++++
   // Método para actualizar el contenido del iframe

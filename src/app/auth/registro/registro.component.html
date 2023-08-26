@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- FONT AWESON -->
   <script src="https://kit.fontawesome.com/37598b2d44.js" crossorigin="anonymous"></script>
-  
+
 </head>
 
 <body>
@@ -58,12 +58,13 @@
               </div>
               Foto
             </label>
-            <input type="file" id="upload" accept="image/*" style="display: none;" formControlName="foto">
+            <input type="file" id="upload" accept="image/*" style="display: none;" formControlName="fotoPerfil">
+
           </div>
 
-          <input type="text" class="input" placeholder="Nombre completo" formControlName="nombre">
-          <input type="email" class="input" placeholder="Correo electrónico" formControlName="correo">
-          <input type="password" class="input" placeholder="Contraseña" formControlName="contrasenia">
+          <input type="text" class="input" placeholder="Nombre completo" formControlName="nombreUsuario">
+          <input type="email" class="input" placeholder="Correo electrónico" formControlName="correoElectronico">
+          <input type="password" class="input" placeholder="Contraseña" formControlName="contrasena">
 
           <div class="btn-txt">
             <p class="p">Selecciona un plan</p>
@@ -86,41 +87,42 @@
               <div class="row justify-content-center">
                 <div class="col-lg-6">
                   <h2 class="text-center mb-4">Registrar Plan</h2>
-                  <form>
+                  <form  [formGroup]="registerForm" (ngSubmit)="agregarPlan()">
                     <div class="mb-3">
                       <label for="inputTipoPlan" class="text_plan">Tipo de plan:</label>
-                      <select class="form-control planes_plan" formControlName="plan">
+                      <select class="form-control planes_plan" formControlName="plan.tipoPlan">
                         <option value="avanzado">Avanzado</option>
                         <option value="basico">Básico</option>
-                        <option value="free">Free</option>  
+                        <option value="free">Free</option>
                       </select>
                     </div>
                     <div class="mb-3">
                       <label for="inputCostoMensual" class="text_plan">Costo mensual:</label>
-                      <input type="text" class="form-control input" id="inputCostoMensual" formControlName="plan.costoMensual"  placeholder="Costo mensual">
+                      <input type="text" class="form-control input" id="inputCostoMensual" formControlName="costoMensual"  placeholder="Costo mensual">
                     </div>
                     <div class="mb-3">
                       <label for="inputFechaInicio" class="text_plan">Fecha de inicio:</label>
-                      <input type="date" class="input form-control"  id="inputFechaInicio" formControlName="plan.fechaInicio" placeholder="Fecha de inicio">
+                      <input type="date" class="input form-control"  id="inputFechaInicio" formControlName="fechaInicio" placeholder="Fecha de inicio">
                     </div>
                     <div class="mb-3">
                       <label for="inputFechaFinal" class="text_plan">Fecha final:</label>
-                      <input type="date" class="input form-control"  id="inputFechaFinal" formControlName="plan.fechaFinal" placeholder="Fecha final">
+                      <input type="date" class="input form-control"  id="inputFechaFinal" formControlName="fechaFinal" placeholder="Fecha final">
                     </div>
                     <div class="d-flex justify-content-center">
+
                       <button (click)="cerrarModal()" type="submit" class="btn btn-primary me-2 button-A">Aceptar</button>
-                      <button (click)="cerrarModal()" type="button" class="btn btn-secondary button-C" >Cerrar</button>
+                      <button (click)="cerrarModal()" type="button" class="btn btn-secondary button-C">Cerrar</button>
                     </div>
                   </form>
                 </div>
               </div>
             </div>
-          
+
           </div>
         </div>
 
 
-        
+
       </div> <!-- END: .modal__content -->
     </div> <!-- END: .modal__container -->
   </div> <!-- END: .modal -->
