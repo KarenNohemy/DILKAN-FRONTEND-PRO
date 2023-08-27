@@ -7,7 +7,7 @@ import { tap } from 'rxjs/operators'; // Importa el operador tap
     providedIn: 'root'
   })
 export class AuthService {
-    private apiUrl = 'http://localhost:3000';
+    private apiUrl = 'https://dilkan-backend-production.up.railway.app';
 
   constructor(private http: HttpClient) { }
     //metodo para autentificar mediante el uso de la coleccion en mongo

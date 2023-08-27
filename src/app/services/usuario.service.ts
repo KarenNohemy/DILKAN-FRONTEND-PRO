@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 })
 export class UsuarioService {
 
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'https://dilkan-backend-production.up.railway.app';
 
   constructor(private http: HttpClient) { }
 
