@@ -16,10 +16,10 @@ const routes: Routes = [
   component: PagesComponent,
     children: [
       {path: 'sidebar', component: SidebarComponent},
-      {path: 'mi-perfil', component: MiPerfilComponent},
-      {path: 'crear-proyecto', component: CrearProyectoComponent},
-      {path: 'area-de-codigo', component: AreaDeCodigoComponent},
-      {path: 'mis-proyectos', component: MisProyectosComponent},
+      {path: 'mi-perfil', component: MiPerfilComponent, data:{titulo: 'Mi Perfil'}},
+      {path: 'crear-proyecto', component: CrearProyectoComponent, data:{titulo: 'Crear Proyecto'}},
+      {path: 'area-de-codigo', component: AreaDeCodigoComponent, data:{titulo: 'Área de Código'}},
+      {path: 'mis-proyectos', component: MisProyectosComponent, data:{titulo: 'Mis Proyectos'}},
       //RUTA QUE SE ABRE CUANDO ESTA EL /
       {path: '', redirectTo: '/landingpage', pathMatch: 'full'},
     ]
